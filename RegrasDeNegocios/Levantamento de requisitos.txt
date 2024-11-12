@@ -1,0 +1,22 @@
+Levantamento de requisitos:
+
+Qual banco ou plataforma de pagamento vocês preferem para a integração? (Ex.: os visitantes devem ver a opção de doação imediatamente ou preferem que ela esteja mais abaixo, depois das informações sobre o evento?)
+
+Vocês querem que a doação seja o foco principal da página ou que ela seja apenas uma das funcionalidades?
+Não(No final da pagina)
+
+Qual deve ser o fluxo principal de navegação da página?(paginaPrincipal(historia e contagem regre.). Pagina2(info do casamento, confirmação e mensagem). Pagina3(listaPresentes)
+
+Vocês possuem um tema específico ou um estilo visual para o casamento que gostariam de refletir no site? (Ex.: cores, fontes, ou tema específico como rústico, vintage, minimalista)(paleta de cores: boho chic = por do sol backgroud: rosa claro ou azul claro)
+
+Há logotipos, imagens ou vídeos dos noivos que gostariam de incluir?(Se sim, salve em um drive e me dê acesso para eu baixar e incluir no site)
+
+Como os convidados devem acessar a funcionalidade sugestao? será por link no site?(definido que seria pela pagina3
+
+Vocês preferem um design minimalista ou algo mais detalhado?(minimalista )
+
+Vocês planejam atualizar a página com informações adicionais antes ou após o casamento?(antes e depois)
+
+Vocês precisam que o site funcione tanto em dispositivos móveis quanto em desktop?(sim)
+
+quanto tempo pra ficar pronto?(até janeiro)
