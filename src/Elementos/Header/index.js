@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import './estilo.css'
 import imagemLogo from '../../Assets/imagens/LogoMN.png'
+import { useState, useEffect } from "react";
 
 const HeaderContainer = styled.header`
     background-color: #F04A00;
@@ -8,28 +9,58 @@ const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
     height: 8vh;
-    
-`
+`;
 
 function Header() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+    const toggleMenu = () => {
+        if (!isDesktop) {
+            setIsOpen(!isOpen);
+        }
+    };
+
+    const tela = () => {
+        setIsDesktop(window.innerWidth >= 768);
+        if (window.innerWidth >= 768) {
+            setIsOpen(false); // Fecha o menu mobile quando em modo desktop
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', tela);
+        
+        // Chamada inicial para definir o estado corretamente com base na largura
+        tela();
+
+        // Cleanup do evento ao desmontar o componente
+        return () => window.removeEventListener('resize', tela);
+    }, []);
+
     return (
         <HeaderContainer>
-
             <nav>
                 <img src={imagemLogo} alt="Foto" className="logo" />
-                <div className="mobile-menu">
+                <div 
+                    onClick={toggleMenu}  
+                    className={`mobile-menu ${isOpen ? 'open' : ''}`}
+                >
                     <div className="line1"></div>
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </div>
-                <ul className="nav-list">
-                    <li><a>Home</a></li>
-                    <li><a>Informações</a></li>
-                    <li><a>Lista de presentes</a></li>
-                </ul>
+                
+                {(isDesktop || isOpen) && (
+                    <ul className="nav-list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Informações</a></li>
+                        <li><a href="#">Lista de presentes</a></li>
+                    </ul>
+                )}
             </nav>
         </HeaderContainer>
-    )
+    );
 }
 
-export default Header
+export default Header;
