@@ -15,7 +15,7 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
-    const toggleMenu = () => {
+    const alternaMenu = () => {
         if (!isDesktop) {
             setIsOpen(!isOpen);
         }
@@ -43,14 +43,14 @@ function Header() {
             <nav>
                 <img src={imagemLogo} alt="Foto" className="logo" />
                 <div 
-                    onClick={toggleMenu}  
+                    onClick={alternaMenu}  
                     className={`mobile-menu ${isOpen ? 'open' : ''}`}
                 >
                     <div className="line1"></div>
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </div>
-                
+
                 {(isDesktop || isOpen) && (
                     <ul className="nav-list">
                         <li><a href="#">Home</a></li>

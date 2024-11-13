@@ -14,7 +14,6 @@ const LogoImage = styled.img`
 function Logo() {
     return (
             <LogoImage/>
-        
     )
 }
 

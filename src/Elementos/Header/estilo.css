@@ -73,8 +73,11 @@ nav {
   }
 
   .nav-list li {
-    width: 200px;
+    margin-left: -20;
+    width: 183px;
+    padding-left: 0px;
     padding-top: 35px;
+    margin-right: 9px;
     cursor: pointer;
   }
 
