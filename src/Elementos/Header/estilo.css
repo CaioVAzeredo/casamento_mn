@@ -95,10 +95,10 @@ nav {
 
   .nav-list {
     position: absolute;
-    top: 5.7vh;
+    top: 4vh;
     right: 0;
     width: 50vw;
-    height: 92vh;
+    height: 50vh;
     background: #F04A00;
     flex-direction: column;
     align-items: center;
