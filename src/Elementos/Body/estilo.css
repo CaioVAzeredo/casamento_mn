@@ -1,6 +1,11 @@
 @media(max-width: 768px) {
-
-.imgPequeno {
-    width: 100vw;
+    .imgPequeno {
+        width: 100vw;
+    }
 }
+
+@media(min-width: 768px) {
+    .imgPequeno {
+        display: none;
+    }
 }

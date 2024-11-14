@@ -24,17 +24,15 @@ function Header() {
     const tela = () => {
         setIsDesktop(window.innerWidth >= 768);
         if (window.innerWidth >= 768) {
-            setIsOpen(false); // Fecha o menu mobile quando em modo desktop
+            setIsOpen(false);
         }
     };
 
     useEffect(() => {
         window.addEventListener('resize', tela);
-        
-        // Chamada inicial para definir o estado corretamente com base na largura
+    
         tela();
 
-        // Cleanup do evento ao desmontar o componente
         return () => window.removeEventListener('resize', tela);
     }, []);
 

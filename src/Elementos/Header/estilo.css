@@ -54,7 +54,6 @@ nav {
 
   .logo {
     height: 40px;
-    text-transform: uppercase;
     letter-spacing: 4px;
 
   }
@@ -64,7 +63,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    gap: 150px;
+
   }
 
   .nav-list {
@@ -74,10 +73,10 @@ nav {
 
   .nav-list li {
     margin-left: -20;
-    width: 183px;
-    padding-left: 0px;
-    padding-top: 35px;
-    margin-right: 9px;
+    width: 183px; 
+    margin: 15px;
+    margin-top: 15px;
+    margin-right: 60px;
     cursor: pointer;
   }
 
@@ -98,7 +97,7 @@ nav {
     top: 4vh;
     right: 0;
     width: 50vw;
-    height: 50vh;
+    height: 92vh;
     background: #F04A00;
     flex-direction: column;
     align-items: center;
