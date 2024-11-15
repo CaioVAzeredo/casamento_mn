@@ -2,6 +2,7 @@ import styled from "styled-components";
 import './estilo.css'
 import imagemLogo from '../../Assets/imagens/LogoMN.png'
 import { useState, useEffect } from "react";
+import { BrowserRouter as Route, Link } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
     background-color: #F04A00;
@@ -30,7 +31,7 @@ function Header() {
 
     useEffect(() => {
         window.addEventListener('resize', tela);
-    
+
         tela();
 
         return () => window.removeEventListener('resize', tela);
@@ -39,9 +40,9 @@ function Header() {
     return (
         <HeaderContainer>
             <nav>
-                <img src={imagemLogo} alt="Foto" className="logo" />
-                <div 
-                    onClick={alternaMenu}  
+                <Link to="/"><img src={imagemLogo} alt="Foto" className="logo" /></Link>
+                <div
+                    onClick={alternaMenu}
                     className={`mobile-menu ${isOpen ? 'open' : ''}`}
                 >
                     <div className="line1"></div>
@@ -51,12 +52,13 @@ function Header() {
 
                 {(isDesktop || isOpen) && (
                     <ul className="nav-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Informações</a></li>
-                        <li><a href="#">Lista de presentes</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/informacoes">Informações</Link></li>
+                        <li><Link to="/ListaDePresentes">Lista de Presentes</Link></li>
                     </ul>
                 )}
             </nav>
+
         </HeaderContainer>
     );
 }
