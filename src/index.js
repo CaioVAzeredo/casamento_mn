@@ -5,6 +5,23 @@ import reportWebVitals from './reportWebVitals'
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyled = createGlobalStyle`
+:root {
+  --yellow-color: #F0D801;
+  --cor-primaria: #F04A00;
+  --red-color: #C70101;
+  --pink-color: #ED0562;
+  --light-pink-color: #EF949F;
+  --purple-color: #CD8DF0;
+  --light-blue-color: #A6D8EF;
+  --dark-blue-color: #014166;
+}
+
+@font-face {
+  font-family: 'FontePadrao';
+  src: url('GoldmanSansCd_Bd.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   margin: 0;
@@ -17,8 +34,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Goldman Sans;
 }
 
 li {
@@ -29,7 +45,7 @@ li {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <GlobalStyled/>
+    <GlobalStyled />
     <App />
   </React.StrictMode>
 );
