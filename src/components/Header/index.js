@@ -10,6 +10,8 @@ const HeaderContainer = styled.header`
     align-items: center;
     justify-content: center;
     height: 8vh;
+    position: relative; 
+    z-index: 10;
 `;
 
 function Header() {

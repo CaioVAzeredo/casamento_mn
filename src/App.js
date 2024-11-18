@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Informacoes from './pages/Informacoes';
 import ListaDePresentes from './pages/ListaDePresentes';
+import NotFound from './pages/notFound';
 
 
 const AppContainer = styled.div`
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/informacoes" element={<Informacoes />} />
           <Route path="/ListaDePresentes" element={<ListaDePresentes />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </AppContainer>
     </Router>

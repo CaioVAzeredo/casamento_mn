@@ -4,11 +4,12 @@ import ImagemTelaTablet from '../../Assets/imagens/tela-tablet.png';
 import ImagemTelaGrande from '../../Assets/imagens/tela-grande.png';
 import './estilo.css';
 
+
 function Body() {
     const [timeLeft, setTimeLeft] = useState('0 dias 00:00:00');
 
     useEffect(() => {
-        const targetDate = new Date("2025-05-31T00:00:00"); // Define a data e hora para a contagem regressiva
+        const targetDate = new Date("2025-05-31T00:00:00"); 
 
         const interval = setInterval(() => {
             const now = new Date();
@@ -32,6 +33,7 @@ function Body() {
 
     return (
         <main>
+
             <section className='principal'>
                 <img src={ImagemTelaPequena} alt='Tela pequena' className='imgPequeno' />
                 <img src={ImagemTelaTablet} alt='Tela media' className='imgTablet' />
@@ -42,7 +44,7 @@ function Body() {
                 <div className='relogio'>
                     <p className='contagem'>{timeLeft}</p>
                     <div className='relogioInfo'>
-                    <p>Dias</p><p>horas</p><p>min</p><p>seg</p>
+                        <p>Dias</p><p>horas</p><p>min</p><p>seg</p>
 
                     </div>
                 </div>
