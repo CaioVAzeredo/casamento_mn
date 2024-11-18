@@ -11,7 +11,17 @@ color: #F04A00;
 font-size: 40px;
 `
 const ContainerParagrafo = styled.p`
-text-align: center;
+font-size: 20px;
+width: 80%;
+margin: 0 auto;
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 20px;
+width: 80%;
+margin: 0 auto;
+width:60%;
+}
+
 `
 
 function Body() {
