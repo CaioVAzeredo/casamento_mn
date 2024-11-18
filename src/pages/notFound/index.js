@@ -11,6 +11,9 @@ h1,h2{
     color: #014166;
     text-align: center;
 }
+p{
+    background-color: black;
+}
 `
 const ButtonVoltar = styled.button`
  background-color: var(--cor-primaria);
