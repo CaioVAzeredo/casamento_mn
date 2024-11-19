@@ -56,6 +56,7 @@ function Header() {
                     <ul className="nav-list">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/informacoes">Informações</Link></li>
+                        <li><a href="/#">Confirmar presença</a></li>
                         <li><Link to="/ListaDePresentes">Lista de Presentes</Link></li>
                     </ul>
                 )}

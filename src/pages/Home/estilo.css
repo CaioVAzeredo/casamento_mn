@@ -155,7 +155,10 @@
 @media screen and (min-width: 1025px) {
 
 
-
+main{
+    width: 1000px;
+    margin: 0 auto;
+}
     .imgPequeno {
         display: none;
     }
@@ -172,4 +175,77 @@
     .SegundaImgTablet {
         display: none;
     }
+
+    .principal {
+        display: flex;
+        height: 40vh;
+
+    }
+
+    .imgMedia {
+        width: 979px;
+        height: 692px;
+        margin: 0 1px;
+        position: relative; /* Fixar a imagem na tela */
+        z-index: 1;
+        top: -100px; /* Ajuste a posição vertical conforme necessário */
+        left: 50%; /* Posiciona horizontalmente no centro */
+        transform: translateX(-50%); /* Alinha a imagem exatamente no centro */
+        flex-direction: column;
+    }
+    
+    .containerContagem {
+        margin: 0 1px;
+        position: relative; /* Fixar o container na tela */
+        z-index: 1;
+        left: 50%; /* Posiciona horizontalmente no centro */
+        transform: translateX(-50%) translateY(-25%); /* Alinha a imagem no centro e move 5% para baixo */
+        flex-direction: column;
+    }
+    
+
+    .contagemRegressiva {
+        padding-top: 100px;
+        width: 400px;
+        height: 200px;
+        position: relative; 
+        margin: 0 ;
+        z-index: 2;
+    }
+
+
+
+    h2 {
+        color: var(--cor-primaria);
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .relogio {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .relogioInfo {
+        padding-left: 35px;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    p {
+        color: var(--cor-primaria);
+        margin: 0;
+    }
+
+    .contagem {
+        color: var(--cor-primaria);
+        text-align: center;
+        font-size: 50px;
+        margin: 0px;
+    }
+
+
 }

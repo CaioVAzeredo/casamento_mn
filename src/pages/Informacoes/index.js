@@ -15,12 +15,14 @@ const ContainerInformacao = styled.div`
         border: none;
     }
     h2{
+        color: #F04A00;
     text-align: center;
 }
 
 p{
     text-align: center;
     font-size: 30px;
+    color: #F04A00;
 }
 iframe{
     margin-left: 10% ;
@@ -54,11 +56,10 @@ function Informacoes() {
             <h1> Informações</h1>
             <hr />
             <h2>Horário</h2>
-            <p>00:00:00</p>
+            <p>16:00h</p>
             <h2>Local</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3838.391636369467!2d-48.03638316431995!3d-15.83600060987515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1731939243574!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+            <p>Rua 34 norte, lote 4, edifício Real Flat, salão de festas.</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3838.386220977436!2d-48.0363883972168!3d-15.8362855911255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3260ad014287%3A0x6457a7e8e689fdd4!2sCondom%C3%ADnio%20Real%20Flat!5e0!3m2!1spt-BR!2sbr!4v1732019265460!5m2!1spt-BR!2sbr"></iframe>
         </ContainerInformacao>
     )
 }

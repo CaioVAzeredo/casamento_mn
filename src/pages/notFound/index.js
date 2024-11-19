@@ -11,10 +11,16 @@ h1,h2{
     color: #014166;
     text-align: center;
 }
-p{
-    background-color: black;
+
+@media(max-width: 768px) {
+    width: 80%;
+h1,h2{
+    font-size: 30px;
+}
 }
 `
+
+
 const ButtonVoltar = styled.button`
  background-color: var(--cor-primaria);
   color: white;
@@ -26,6 +32,7 @@ const ButtonVoltar = styled.button`
   &:hover{
     background-color: #014166; 
   }
+
 `
 
 

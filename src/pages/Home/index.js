@@ -65,6 +65,7 @@ function Body() {
                 <img src={ImagemTelaTablet} alt='Tela media' className='imgTablet' />
                 <img src={ImagemTelaGrande} alt='Tela media' className='imgMedia' />
             </section>
+            <div className='containerContagem'>
             <section className='contagemRegressiva'>
                 <h2>CONTAGEM REGRESSIVA</h2>
                 <div className='relogio'>
@@ -74,6 +75,8 @@ function Body() {
                     </div>
                 </div>
             </section>
+            <div className='espacoContagem'></div>
+            </div>
             <section className='secundario'>
 
                 <img src={SegundaImagemTelaPequena} alt='Tela pequena' className='SegundaImgPequeno' />

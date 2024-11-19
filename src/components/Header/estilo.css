@@ -144,3 +144,12 @@ nav {
     tranform: tranlateX(0);
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nav-list li {
+    text-align: center;
+    padding: auto;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
