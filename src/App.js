@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Informacoes from './pages/Informacoes';
 import ListaDePresentes from './pages/ListaDePresentes';
 import NotFound from './pages/notFound';
+import Footer from './components/Footer';
 
 
 const AppContainer = styled.div`
@@ -23,6 +24,7 @@ function App() {
           <Route path="/ListaDePresentes" element={<ListaDePresentes />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </AppContainer>
     </Router>
   );

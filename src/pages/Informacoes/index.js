@@ -60,7 +60,10 @@ function Informacoes() {
             <p>16:00h</p>
             <h2>Local</h2>
             <p>Rua 34 norte, lote 4, edifício Real Flat, salão de festas.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3838.386220977436!2d-48.0363883972168!3d-15.8362855911255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3260ad014287%3A0x6457a7e8e689fdd4!2sCondom%C3%ADnio%20Real%20Flat!5e0!3m2!1spt-BR!2sbr!4v1732019265460!5m2!1spt-BR!2sbr"></iframe>
+            <iframe 
+            title='Localização da festa'
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3838.386220977436!2d-48.0363883972168!3d-15.8362855911255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3260ad014287%3A0x6457a7e8e689fdd4!2sCondom%C3%ADnio%20Real%20Flat!5e0!3m2!1spt-BR!2sbr!4v1732019265460!5m2!1spt-BR!2sbr">
+            </iframe>
         </ContainerInformacao>
     )
 }

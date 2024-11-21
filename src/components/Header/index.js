@@ -56,8 +56,8 @@ function Header() {
                     <ul className="nav-list">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/informacoes">Informações</Link></li>
-                        <li><Link to ="https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform">Confirmar presença</Link></li>
                         <li><Link to="/ListaDePresentes">Lista de Presentes</Link></li>
+                        <li><Link to ="https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform">Confirmar presença</Link></li>
                     </ul>
                 )}
             </nav>
