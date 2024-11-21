@@ -43,7 +43,8 @@ iframe{
 @media screen and (min-width: 1025px) {
     iframe {
     width: 800px;
-    margin: 0 auto;
+    margin: 0px auto ;
+    padding: 50px;
     border: none;
     display: block; 
 }

@@ -67,6 +67,7 @@ function Body() {
             </section>
             <div className='containerContagem'>
             <section className='contagemRegressiva'>
+            <div className='data'>31 de maio de 2025</div>
                 <h2>CONTAGEM REGRESSIVA</h2>
                 <div className='relogio'>
                     <p className='contagem'>{timeLeft}</p>
