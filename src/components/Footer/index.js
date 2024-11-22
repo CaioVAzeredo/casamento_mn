@@ -4,7 +4,6 @@ import './estilo.css'
 const ContainerFooter = styled.footer`
 position: relative;
 z-index: 2;
-margin-top: 212%;
     height: 30px;
     background-color: var(--cor-primaria);
     display: flex;
@@ -15,7 +14,9 @@ margin-top: 212%;
     p{
         color: white;
     }
-
+    @media screen and (max-width: 768px) {
+        margin-top: 100vh;
+    }
     @media screen and (min-width: 768px) and (max-width: 1024px) {
         margin-top: 105%;
     }

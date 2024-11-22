@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import './estilo.css'
 import ImgInfo from '../../Assets/imagens/img_matheusENadyrPgInformacoes.png'
 const ContainerInformacao = styled.div`
   display: flex;
@@ -8,14 +7,13 @@ const ContainerInformacao = styled.div`
   align-items: center;
   width: 80%;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 850px;
 
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    gap: 20px; /* Espaço entre os itens */
   }
 
   .Infos {
@@ -62,7 +60,7 @@ const ContainerInformacao = styled.div`
 
   .foto {
     flex: 1; /* Foto ocupa o mesmo espaço que a seção de informações */
-    height: 100vh; /* Foto ocupa toda a altura da tela */
+    height:904px; /* Foto ocupa toda a altura da tela */
     display: flex;
     justify-content: center;
     align-items: center;

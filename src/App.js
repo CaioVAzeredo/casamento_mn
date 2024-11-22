@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/informacoes" element={<Informacoes />} />
-          <Route path="/ListaDePresentes" element={<ListaDePresentes />} />
+          <Route path="/lista-de-presentes" element={<ListaDePresentes />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </AppContainer>
