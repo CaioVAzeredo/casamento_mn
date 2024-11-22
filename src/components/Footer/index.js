@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import './estilo.css'
 
 const ContainerFooter = styled.footer`
+position: relative;
+z-index: 2;
+margin-top: 212%;
     height: 30px;
     background-color: var(--cor-primaria);
     display: flex;
@@ -11,6 +14,10 @@ const ContainerFooter = styled.footer`
     font-size: 20px; /* Ajuste o tamanho da fonte conforme necessário */
     p{
         color: white;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 105%;
     }
 `
 

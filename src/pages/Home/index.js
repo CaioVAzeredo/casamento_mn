@@ -66,17 +66,17 @@ function Body() {
                 <img src={ImagemTelaGrande} alt='Tela media' className='imgMedia' />
             </section>
             <div className='containerContagem'>
-            <section className='contagemRegressiva'>
-            <div className='data'>31 de maio de 2025</div>
-                <h2>CONTAGEM REGRESSIVA</h2>
-                <div className='relogio'>
-                    <p className='contagem'>{timeLeft}</p>
-                    <div className='relogioInfo'>
-                        <p>Dias</p><p>horas</p><p>min</p><p>seg</p>
+                <section className='contagemRegressiva'>
+                    <div className='data'>31 de maio de 2025</div>
+                    <h2>CONTAGEM REGRESSIVA</h2>
+                    <div className='relogio'>
+                        <p className='contagem'>{timeLeft}</p>
+                        <div className='relogioInfo'>
+                            <p>Dias</p><p>horas</p><p>min</p><p>seg</p>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <div className='espacoContagem'></div>
+                </section>
+                <div className='espacoContagem'></div>
             </div>
             <section className='secundario'>
 
