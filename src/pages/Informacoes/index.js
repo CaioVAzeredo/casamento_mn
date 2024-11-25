@@ -17,7 +17,7 @@ const ContainerInformacao = styled.div`
   }
 
   .Infos {
-    flex: 1; /* Faz com que o conteúdo ocupe a mesma proporção que a foto */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,16 +59,16 @@ const ContainerInformacao = styled.div`
   }
 
   .foto {
-    flex: 1; /* Foto ocupa o mesmo espaço que a seção de informações */
-    height:904px; /* Foto ocupa toda a altura da tela */
+    flex: 1; 
+    height:904px; 
     display: flex;
     justify-content: center;
     align-items: center;
 
     img {
       width: auto;
-      height: 100%; /* Ajusta proporcionalmente à altura */
-      object-fit: cover; /* Preenche o espaço sem distorcer */
+      height: 100%; 
+      object-fit: cover; 
     }
   }
 
