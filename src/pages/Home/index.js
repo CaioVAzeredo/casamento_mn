@@ -5,6 +5,8 @@ import ImagemTelaGrande from '../../Assets/imagens/tela-grande.png';
 
 import SegundaImagemTelaPequena from '../../Assets/imagens/segundaImagem-tela-pequena.png'
 import SegundaImagemTelaTablet from '../../Assets/imagens/segundaImagem-tela-tablet.png'
+import SegundaImagemTelaGrande from '../../Assets/imagens/segundaImagem-tela-grande.png'
+
 import './estilo.css';
 import styled from 'styled-components';
 
@@ -13,6 +15,11 @@ text-align: center;
 color: #F04A00;
 font-size: 40px;
 text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.5);
+
+@media screen and (min-width: 1025px) {
+width: 30%px;
+text-align: center;
+}
 `
 const ContainerParagrafo = styled.p`
 color: #D24607;
@@ -64,7 +71,6 @@ function Body() {
                 <img src={ImagemTelaPequena} alt='Tela pequena' className='imgPequeno' />
                 <img src={ImagemTelaTablet} alt='Tela media' className='imgTablet' />
                 <img src={ImagemTelaGrande} alt='Tela media' className='imgMedia' />
-            </section>
             <div className='containerContagem'>
                 <section className='contagemRegressiva'>
                     <div className='data'>31 de maio de 2025</div>
@@ -78,10 +84,11 @@ function Body() {
                 </section>
                 <div className='espacoContagem'></div>
             </div>
+            </section>
             <section className='secundario'>
-
                 <img src={SegundaImagemTelaPequena} alt='Tela pequena' className='SegundaImgPequeno' />
                 <img src={SegundaImagemTelaTablet} alt='Tela tablet' className='SegundaImgTablet' />
+                <img src={SegundaImagemTelaGrande} alt='Tela grande' className='SegundaImgGrande' />
                 <div className='ContainerTexto'>
                     <Containerh1>SOBRE NÓS</Containerh1>
                     <ContainerParagrafo>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</ContainerParagrafo>

@@ -1,3 +1,10 @@
+.data {
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
 
 @media(max-width: 768px) {
     .imgPequeno {
@@ -11,13 +18,15 @@
     .imgMedia {
         display: none;
     }
-    .data{
+
+    .data {
         color: var(--cor-primaria);
         text-align: center;
         font-size: 30px;
         font-family: "Poppins", sans-serif;
-  font-weight: 400;
+        font-weight: 400;
     }
+
     h2 {
         color: var(--cor-primaria);
         text-align: center;
@@ -59,7 +68,7 @@
         display: none;
     }
 
-    .SegundaImgTabletGrande {
+    .SegundaImgGrande {
         display: none;
     }
 
@@ -119,13 +128,15 @@
         color: var(--cor-primaria);
         margin: 0;
     }
-    .data{
+
+    .data {
         color: var(--cor-primaria);
         text-align: center;
         font-size: 30px;
         font-family: "Poppins", sans-serif;
-  font-weight: 400;
+        font-weight: 400;
     }
+
     .contagem {
         color: var(--cor-primaria);
         text-align: center;
@@ -164,21 +175,21 @@
         display: none;
     }
 
+    .SegundaImgGrande {
+        display: none;
+    }
+
 }
-.data{
-    color: var(--cor-primaria);
-    text-align: center;
-    font-size: 30px;
-    font-family: "Poppins", sans-serif;
-font-weight: 400;
-}
+
 @media screen and (min-width: 1025px) {
 
 
-main{
-    width: 1000px;
-    margin: 0 auto;
-}
+    main {
+        height: 1000px;
+        width: 1000px;
+        margin: 0 auto;
+    }
+
     .imgPequeno {
         display: none;
     }
@@ -198,7 +209,7 @@ main{
 
     .principal {
         display: flex;
-        height: 40vh;
+        height: 591px;
 
     }
 
@@ -206,30 +217,37 @@ main{
         width: 979px;
         height: 692px;
         margin: 0 1px;
-        position: relative; /* Fixar a imagem na tela */
+        position: relative;
+        /* Fixar a imagem na tela */
         z-index: 1;
-        top: -100px; /* Ajuste a posição vertical conforme necessário */
-        left: 50%; /* Posiciona horizontalmente no centro */
-        transform: translateX(-50%); /* Alinha a imagem exatamente no centro */
+        top: -100px;
+        /* Ajuste a posição vertical conforme necessário */
+        left: 50%;
+        /* Posiciona horizontalmente no centro */
+        transform: translateX(-50%);
+        /* Alinha a imagem exatamente no centro */
         flex-direction: column;
     }
-    
+
     .containerContagem {
-        margin-top: 10%;
-        position: relative; 
+        margin-top: 8%;
+        height: 300px;
+        position: relative;
         z-index: 1;
-        left: 50%; /* Posiciona horizontalmente no centro */
-        transform: translateX(-50%);/* Alinha a imagem no centro e move 5% para baixo */
+        left: -80%;
+        /* Posiciona horizontalmente no centro */
+        transform: translateX(-42%) translateY(93%);
+        /* Alinha a imagem no centro e move 5% para baixo */
         flex-direction: column;
     }
-    
+
 
     .contagemRegressiva {
         padding-top: 1px;
         width: 400px;
         height: 200px;
-        position: relative; 
-        margin: 0 ;
+        position: relative;
+        margin: 0;
         z-index: 2;
     }
 
@@ -267,42 +285,30 @@ main{
         margin: 0px;
     }
 
+    /* ----------------------------------------------- */
+    .secundario {
+        display: flex;
+        height: 699px;
+    }
+
+    .SegundaImgGrande {
+        z-index: 1;
+        position: relative; 
+        height: 699px;
+    }
+    
+    .ContainerTexto {
+        z-index: 2;
+        position: relative;
+        z-index: 1;
+        left: 0%;
+        /* Posiciona horizontalmente no centro */
+        transform: translateX(-96%);
+        /* Alinha a imagem no centro e move 5% para baixo */
+        flex-direction: column;
+
+    }
+    
 
 }
-@media screen and (min-height: 500px ) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: 8%;
-    }
-}
-@media screen and (min-height: 577px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: 8%;
-    }
-}
 
-@media screen and (min-height: 784px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: 3%;
-    }
-}
-
-@media screen and (min-height: 820px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: 3%;
-    }
-}
-@media screen and (min-height: 850px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: -5%;
-    }
-}
-@media screen and (min-height: 1080px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: -10%;
-    }
-}
-@media screen and (min-height: 1188px) and (min-width: 1025px){
-    .containerContagem {
-        margin-top: -17%;
-    }
-}

@@ -72,6 +72,12 @@ const ContainerInformacao = styled.div`
     }
   }
 
+  @media (max-width: 768px){
+    .foto{
+        display: none;
+    }
+  }
+
   @media (min-width: 768px) and (max-width: 1230px) {
     .foto{
         display: none;
