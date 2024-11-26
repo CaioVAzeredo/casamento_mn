@@ -17,7 +17,7 @@ font-size: 40px;
 text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.5);
 
 @media screen and (min-width: 1025px) {
-width: 30%px;
+width: 600px;
 text-align: center;
 }
 `
