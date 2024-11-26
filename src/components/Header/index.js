@@ -42,7 +42,7 @@ function Header() {
     return (
         <HeaderContainer>
             <nav>
-                <Link to="/"><img src={imagemLogo} alt="Foto" className="logo" onClick={alternaMenu}/></Link>
+                <Link to="/"><img src={imagemLogo} alt="Foto" className="logo" /></Link>
                 <div
                     onClick={alternaMenu}
                     className={`mobile-menu ${isOpen ? 'open' : ''}`}
@@ -58,13 +58,11 @@ function Header() {
                         <li><Link to="/informacoes" onClick={alternaMenu}>Informações</Link></li>
                         <li><Link to="/lista-de-presentes" onClick={alternaMenu}>Lista de presentes</Link></li>
                         <li><Link to="https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform">Confirmar presença</Link></li>
-                <div className="EspacoEmBranco" onClick={alternaMenu}>
-
-                </div>
+                        <div className="EspacoEmBranco" onClick={alternaMenu}>
+                        </div>
                     </ul>
                 )}
             </nav>
-
         </HeaderContainer>
     );
 }

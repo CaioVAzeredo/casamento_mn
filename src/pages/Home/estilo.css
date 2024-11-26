@@ -235,9 +235,7 @@
         position: relative;
         z-index: 1;
         left: -80%;
-        /* Posiciona horizontalmente no centro */
         transform: translateX(-42%) translateY(93%);
-        /* Alinha a imagem no centro e move 5% para baixo */
         flex-direction: column;
     }
 
