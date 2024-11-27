@@ -71,7 +71,12 @@ function Header() {
                     <div className="line3"></div>
                 </div>
 
-                {(isDesktop || isOpen) && ( <ul className="nav-list">{opcoes.map(opcao => <li><Link to={opcao.Link} onClick={alternaMenu}>{opcao.Pagina}</Link></li>)}</ul>)}
+                {(isDesktop || isOpen) && (
+                    <>
+                        <ul className="nav-list">{opcoes.map(opcao => <li><Link to={opcao.Link} onClick={alternaMenu}>  {opcao.Pagina} </Link></li>)} <div className="EspacoEmBranco" onClick={alternaMenu}></div> </ul>
+                    </>
+
+                )}
             </nav>
         </HeaderContainer >
     );
