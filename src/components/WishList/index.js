@@ -68,13 +68,10 @@ const ContainerModal = styled.div`
 function WishList(props) {
     const [Modal, setModal] = useState(false)
 
-    function abrirModal() {
-        setModal(true)
+    function statusModal() {
+        setModal(!Modal)
     }
 
-    function fecharModal() {
-        setModal(false)
-    }
     return (
         <>
             <ContainerWishList>
@@ -83,14 +80,14 @@ function WishList(props) {
                 </ContainerImg>
                 <h3>{props.nome}</h3>
                 <p>R$ {props.preco.toFixed(2)}</p>
-                <Button informacao='Presentear' onClick={abrirModal} />
+                <Button informacao='Presentear' onClick={statusModal} />
             </ContainerWishList>
 
             {(Modal) && (<ContainerModal>
                 <img src={props.img} alt={props.nome} />
                 <h3>{props.nome}</h3>
                 <p>R$ {props.preco.toFixed(2)}</p>
-                <Button informacao='Fechar' onClick={fecharModal} />
+                <Button informacao='Fechar' onClick={statusModal} />
             </ContainerModal>)}
         </>
     );

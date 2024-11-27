@@ -15,6 +15,7 @@ const HeaderContainer = styled.header`
 `;
 
 function Header() {
+
     const [isOpen, setIsOpen] = useState(false);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
@@ -39,6 +40,24 @@ function Header() {
         return () => window.removeEventListener('resize', tela);
     }, []);
 
+    const opcoes = [
+        {
+            Link: '/',
+            Pagina: 'Home'
+        },
+        {
+            Link: '/informacoes',
+            Pagina: 'Informações'
+        },
+        {
+            Link: '/lista-de-presentes',
+            Pagina: 'Lista de presentes'
+        },
+        {
+            Link: 'https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform',
+            Pagina: 'Confirmar presença'
+        }
+    ]
     return (
         <HeaderContainer>
             <nav>
@@ -52,18 +71,9 @@ function Header() {
                     <div className="line3"></div>
                 </div>
 
-                {(isDesktop || isOpen) && (
-                    <ul className="nav-list">
-                        <li><Link to="/" onClick={alternaMenu}>Home</Link></li>
-                        <li><Link to="/informacoes" onClick={alternaMenu}>Informações</Link></li>
-                        <li><Link to="/lista-de-presentes" onClick={alternaMenu}>Lista de presentes</Link></li>
-                        <li><Link to="https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform">Confirmar presença</Link></li>
-                        <div className="EspacoEmBranco" onClick={alternaMenu}>
-                        </div>
-                    </ul>
-                )}
+                {(isDesktop || isOpen) && ( <ul className="nav-list">{opcoes.map(opcao => <li><Link to={opcao.Link} onClick={alternaMenu}>{opcao.Pagina}</Link></li>)}</ul>)}
             </nav>
-        </HeaderContainer>
+        </HeaderContainer >
     );
 }
 
