@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-import ContainerH1 from '../../components/ContainerH1';/* 
-import ContainerInformacao from '../../components/ContainerInformacao'; */
-import Arrayinformacoes from '../../components/ArrayInformacoes';
+import styled from "styled-components";
 
 const ContainerInformacaoDiv = styled.div`
   display: grid;
@@ -61,24 +58,9 @@ p{
   }
 `;
 
-function Informacoes() {
-  const informacoesList = Arrayinformacoes();
-
-  return (
-    <>
-      <ContainerH1 conteudo="Seja testemunha do nosso dia especial" />
-
-      <ContainerInformacaoDiv>
-        {informacoesList.map(
-          informacao => <div>
-            <div className={informacao.estilo}></div>
-            <h2>{informacao.info1}:</h2>
-            <p>{informacao.info2}</p>
-          </div>
-        )}
-      </ContainerInformacaoDiv>
-    </>
-  );
+function ContainerInformacao(informacoesList) {
+  return informacoesList.map(informacao => <div><div className={informacao.estilo}></div><h2>{informacao.info1}:</h2><p>{informacao.info2}</p></div>
+  )
 }
 
-export default Informacoes;
+export default ContainerInformacao

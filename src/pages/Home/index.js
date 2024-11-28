@@ -1,9 +1,20 @@
 import { useEffect, useState } from 'react';
 
 import './estilo.css';
+
 import ContainerPrincipal from '../../components/ContainerPrincipal';
 import ContainerSecundario from '../../components/ContainerSecundario';
+import styled from 'styled-components';
 
+const ContainerMain = styled.main`
+@media screen and (min-width: 1025px) {
+
+main {
+    height: 1000px;
+    width: 1000px;
+    margin: 0 auto;
+}
+}`
 
 function Body() {
     const [timeLeft, setTimeLeft] = useState('0 dias 00:00:00');
@@ -32,10 +43,10 @@ function Body() {
     }, []);
 
     return (
-        <main>
+        <ContainerMain>
             <ContainerPrincipal timer={timeLeft} />
-            <ContainerSecundario/>
-        </main>
+            <ContainerSecundario />
+        </ContainerMain>
     );
 }
 

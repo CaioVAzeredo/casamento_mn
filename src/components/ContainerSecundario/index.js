@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 import SegundaImagemTelaPequena from '../../Assets/imagens/segundaImagem-tela-pequena.png'
 import SegundaImagemTelaTablet from '../../Assets/imagens/segundaImagem-tela-tablet.png'
 import SegundaImagemTelaGrande from '../../Assets/imagens/segundaImagem-tela-grande.png'
@@ -16,6 +15,7 @@ width: 600px;
 text-align: center;
 }
 `
+
 const ContainerParagrafo = styled.p`
 color: #D24607;
 text-shadow: 2px 1px px rgba(0, 0, 0, 0.5);
@@ -32,6 +32,7 @@ width:60%;
 }
 
 `
+
 const ContainerSectionSecundario = styled.section`
 @media(max-width: 768px) {
     /* ------------------------------------------------ */
