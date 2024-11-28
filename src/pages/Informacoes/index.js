@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import ContainerH1 from '../../components/ContainerH1';/* 
-import ContainerInformacao from '../../components/ContainerInformacao'; */
+
+import ContainerH1 from '../../components/ContainerH1';
 import Arrayinformacoes from '../../components/ArrayInformacoes';
+import ContainerInformacao from '../../components/ContainerInformacao';
 
 const ContainerInformacaoDiv = styled.div`
   display: grid;
@@ -42,18 +43,15 @@ p{
   margin: 0 auto;
 }
 
-  @media (max-width: 768px) {
+
+  @media(max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
     h2{
-  margin: 0px;
-}
-p{
-  margin-bottom: 40px;
-}
-  }
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    grid-template-columns: repeat(1, 1fr);
+      margin: 0px;
+      }
+    p{
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: 2000px) {
@@ -69,16 +67,11 @@ function Informacoes() {
       <ContainerH1 conteudo="Seja testemunha do nosso dia especial" />
 
       <ContainerInformacaoDiv>
-        {informacoesList.map(
-          informacao => <div>
-            <div className={informacao.estilo}></div>
-            <h2>{informacao.info1}:</h2>
-            <p>{informacao.info2}</p>
-          </div>
-        )}
+        <ContainerInformacao informacoes={informacoesList} />
       </ContainerInformacaoDiv>
     </>
   );
+
 }
 
 export default Informacoes;
