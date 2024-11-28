@@ -10,17 +10,17 @@ const ContainerWishList = styled.div`
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 200px; /* Define a largura fixa */
-  height: 300px; /* Define a altura fixa */
+  width: 200px; 
+  height: 300px; 
   text-align: center;
   background-color: white;
   
 `;
 
 const ContainerImg = styled.div`
-  width: 100%; /* A largura da div acompanha o Container */
-  height: 150px; /* Altura fixa da div que conterá a imagem */
-  overflow: hidden; /* Esconde partes da imagem que ultrapassem a div */
+  width: 100%; 
+  height: 150px;
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,8 +28,8 @@ const ContainerImg = styled.div`
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz com que a imagem preencha a área sem distorcer */
-    border-radius: 5px; /* Mantém o arredondamento nos cantos */
+    object-fit: cover; 
+    border-radius: 5px; 
   }
 `;
 const ContainerModal = styled.div`
