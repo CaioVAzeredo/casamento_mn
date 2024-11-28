@@ -69,7 +69,7 @@ function Informacoes() {
     {
       estilo: 'onde',
       info1: 'Onde',
-      info2: 'Rua 34 norte, lote 4, Edifício Real Flat, salão de festas.'
+      info2: 'Rua 34 norte, Lote 4, Edifício Real Flat, Salão de festas.'
     },
     {
       estilo: 'vestes',
