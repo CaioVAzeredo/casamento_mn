@@ -65,38 +65,9 @@ const ContainerSection = styled.section`
         margin: 0px;
     }
 
-    /* ------------------------------------------------ */
-    .secundario {
-        position: relative;
-    }
-
-    .SegundaImgTablet {
-        display: none;
-    }
-
-    .SegundaImgGrande {
-        display: none;
-    }
-
-    .SegundaImgPequeno {
-        z-index: 1;
-        width: 100vw;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-
-    .ContainerTexto {
-        position: absolute;
-        left: 30px;
-        width: 90%;
-        z-index: 2;
-
-    }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .imgPequeno {
         display: none;
     }
@@ -154,37 +125,6 @@ const ContainerSection = styled.section`
         text-align: center;
     }
 
-    .secundario {
-        position: relative;
-    }
-
-    .SegundaImgTablet {
-        width: 400px;
-        position: absolute;
-        top: 0;
-        width: 60%;
-        margin: 0 20%;
-        z-index: 1;
-    }
-
-
-    .ContainerTexto {
-        position: absolute;
-        left: 30px;
-        width: 90%;
-        z-index: 2;
-
-    }
-
-    /* ------------------------------------ */
-    .SegundaImgPequeno {
-        display: none;
-    }
-
-    .SegundaImgGrande {
-        display: none;
-    }
-
 }
 
 @media screen and (min-width: 1025px) {
@@ -204,7 +144,6 @@ height: 590px;
         display: none;
     }
 
-    /* --------------------------------- */
     .SegundaImgPequeno {
         display: none;
     }
@@ -224,14 +163,10 @@ height: 590px;
         height: 692px;
         margin: 0 1px;
         position: relative;
-        /* Fixar a imagem na tela */
         z-index: 1;
         top: -100px;
-        /* Ajuste a posição vertical conforme necessário */
         left: 50%;
-        /* Posiciona horizontalmente no centro */
         transform: translateX(-50%);
-        /* Alinha a imagem exatamente no centro */
         flex-direction: column;
     }
 
@@ -287,29 +222,7 @@ height: 590px;
         font-size: 50px;
         margin: 0px;
     }
-
-    /* ----------------------------------------------- */
-    .secundario {
-        display: flex;
-        height: 699px;
-    }
-
-    .SegundaImgGrande {
-        z-index: 1;
-        position: relative; 
-        height: 699px;
-    }
     
-    .ContainerTexto {
-        z-index: 2;
-        position: relative;
-        z-index: 1;
-        transform: translateX(-110%);
-        flex-direction: column;
-
-    }
-    
-
 }
 
 
