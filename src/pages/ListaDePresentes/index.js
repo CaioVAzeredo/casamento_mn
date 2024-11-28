@@ -226,6 +226,16 @@ function ListaDePresentes() {
             nome: "Lyor Faqueiro de Aço Inox Dourado 24 Peças",
             preco: 119.61,
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/lyor-faqueiro-de-aço-inox.png"
+        },
+        {
+            nome: "Jogo de 3 Facas Inox Hamilton Beach Com Tábua Grey Stone",
+            preco: 99.90,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Jode-de-3-facas.png"
+        },
+        {
+            nome: "Pedra para Afiar Dupla Face Suprema, Brinox, Cinza, 20 x 5 cm",
+            preco: 42.90,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/pedra-para-afiar.png"
         }
     ];
     
