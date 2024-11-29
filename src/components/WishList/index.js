@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useState } from 'react';
 import ModalProduto from '../ModalProduto';
 import Button from '../Button';
-
+import ModalPix from '../ModalPix';
 
 
 const ContainerWishList = styled.div`
@@ -36,14 +36,14 @@ const ContainerImg = styled.div`
 `;
 
 function WishList(props) {
-  const [Modal, setModal] = useState(false);
-  const [ModalPix, setModalPix] = useState(false);
+  const [IsModal, setModal] = useState(false);
+  const [IsModalPix, setModalPix] = useState(false);
 
   function statusModal() {
-    setModal(!Modal);
+    setModal(!IsModal);
   }
   function statusModalPix() {
-    setModalPix(!ModalPix);
+    setModalPix(!IsModalPix);
   }
 
   function ClickForaDoModal(e) {
@@ -62,7 +62,6 @@ function WishList(props) {
 
   return (
     <>
-
       <ContainerWishList>
         <ContainerImg>
           <img src={props.img} alt={props.nome} />
@@ -72,7 +71,7 @@ function WishList(props) {
         <Button informacao="Presentear" onClick={statusModal} />
       </ContainerWishList>
 
-      {Modal && (<>
+      {IsModal && (<>
         <ModalProduto
           onClickForaDoModal={ClickForaDoModal}
           onClickStatusModal={statusModal}
@@ -84,7 +83,7 @@ function WishList(props) {
         />
       </>
       )}
-      {ModalPix && (
+      {IsModalPix && (
         <ModalPix
           onClickForaDoModal={ClickForaDoModalPix}
           onClickStatusModal={statusModalPix}

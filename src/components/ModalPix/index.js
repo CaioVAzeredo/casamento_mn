@@ -59,13 +59,15 @@ const ContainerModalPix = styled.div`
   }
 `
 function ModalPix({ onClickForaDoModal, onClickStatusModal, imgPix, nomeProduto, preco, chavePix }) {
-    return (<ContainerForaDoModalPix onClick={onClickForaDoModal}>
-        <ContainerModalPix>
-            <CloseButton onClick={onClickStatusModal} />
-            <img src={imgPix} alt={nomeProduto} />
-            <p>R$ {preco}</p>
-            <p>Chave pix: {chavePix}</p>
-        </ContainerModalPix>
-    </ContainerForaDoModalPix>)
+  return (
+    <ContainerForaDoModalPix onClick={onClickForaDoModal}>
+      <ContainerModalPix>
+        <CloseButton onClick={onClickStatusModal} />
+        <img src={imgPix} alt={nomeProduto} />
+        <p>R$ {preco}</p>
+        <p>Chave pix: {chavePix}</p>
+      </ContainerModalPix>
+    </ContainerForaDoModalPix>
+  )
 }
 export default ModalPix

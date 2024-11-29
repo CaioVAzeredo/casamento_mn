@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from "../../components/Button"
 
 const ContainerNotFound = styled.div`
 color: var(--cor-primaria);
@@ -21,20 +22,6 @@ h1,h2{
 `
 
 
-const ButtonVoltar = styled.button`
- background-color: var(--cor-primaria);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5%;
-
-  &:hover{
-    background-color: #014166; 
-  }
-
-`
-
 
 function NotFound() {
     function PagInicial() {
@@ -44,9 +31,7 @@ function NotFound() {
         <ContainerNotFound>
             <h1> Opss... Página nao encontrada</h1>
             <h2>Retorne para a página inicial do site clicando no botão abaixo</h2>
-            <ButtonVoltar onClick={PagInicial}>
-                Voltar
-            </ButtonVoltar>
+            <Button onClick={PagInicial} informacao="Voltar" />
         </ContainerNotFound>
     )
 }
