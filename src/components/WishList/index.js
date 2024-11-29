@@ -1,48 +1,9 @@
 import styled from 'styled-components';
-import Button from '../Button';
 import { useState } from 'react';
+import ModalProduto from '../ModalProduto';
+import Button from '../Button';
 
-const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-`;
 
-const CloseButton = styled.div`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .line1,
-  .line2 {
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: var(--cor-primaria); /* Cor primária */
-    border-radius: 2px;
-  }
-
-  .line1 {
-    transform: rotate(45deg);
-  }
-
-  .line2 {
-    transform: rotate(-45deg);
-  }
-`;
 
 const ContainerWishList = styled.div`
   display: flex;
@@ -74,55 +35,15 @@ const ContainerImg = styled.div`
   }
 `;
 
-const ContainerModal = styled.div`
- position: relative;
-  width: 50%;
-  height: 95%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  border-radius: 10px;
-
-  img {
-    width: 300px;
-    height: auto;
-    margin-bottom: 20px;
-    object-fit: cover;
-  }
-
-  h3 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #333;
-  }
-
-  p {
-    font-size: 18px;
-    color: #555;
-  }
-.botoes-doacao{
-  margin: 0 auto;
-}
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    border-radius: 0px;
-    .botoes-doacao{
-      width: 180px;
-      padding: 10px;
-      margin: 0 auto;
-    }
-  }
-`
 function WishList(props) {
   const [Modal, setModal] = useState(false);
+  const [ModalPix, setModalPix] = useState(false);
 
   function statusModal() {
     setModal(!Modal);
+  }
+  function statusModalPix() {
+    setModalPix(!ModalPix);
   }
 
   function ClickForaDoModal(e) {
@@ -130,9 +51,18 @@ function WishList(props) {
       setModal(false);
     }
   }
+  function ClickForaDoModalPix(e) {
+    if (e.target === e.currentTarget) {
+      setModalPix(false);
+    }
+  }
+  function ClickAmazon() {
+    window.location.href = "https://www.amazon.com.br/hz/wishlist/ls/1YJB1CH3PNW96?ref_=wl_share"
+  }
 
   return (
     <>
+
       <ContainerWishList>
         <ContainerImg>
           <img src={props.img} alt={props.nome} />
@@ -142,22 +72,28 @@ function WishList(props) {
         <Button informacao="Presentear" onClick={statusModal} />
       </ContainerWishList>
 
-      {Modal && (
-        <Overlay onClick={ClickForaDoModal}>
-          <ContainerModal>
-            <CloseButton onClick={statusModal}>
-              <div className="line1"></div>
-              <div className="line2"></div>
-            </CloseButton>
-            <img src={props.img} alt={props.nome} />
-            <h3>{props.nome}</h3>
-            <p>R$ {props.preco.toFixed(2)}</p>
-            <div className="botoes-doacao">
-              <Button informacao="Presentear por pix" onClick={statusModal} />
-              <Button informacao="Presentear pela Amazon" onClick={statusModal} />
-            </div>
-          </ContainerModal>
-        </Overlay>
+      {Modal && (<>
+        <ModalProduto
+          onClickForaDoModal={ClickForaDoModal}
+          onClickStatusModal={statusModal}
+          onClickStatusModalPix={statusModalPix}
+          onClickAmazon={ClickAmazon}
+          img={props.img}
+          nome={props.nome}
+          preco={props.preco.toFixed(2)}
+        />
+      </>
+      )}
+      {ModalPix && (
+        <ModalPix
+          onClickForaDoModal={ClickForaDoModalPix}
+          onClickStatusModal={statusModalPix}
+          imgPix={props.pix}
+          nomeProduto={props.nome}
+          preco={props.preco.toFixed(2)}
+          chavePix={props.chavePix}
+        />
+
       )}
     </>
   );
