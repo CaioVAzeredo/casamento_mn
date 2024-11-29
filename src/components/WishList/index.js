@@ -75,7 +75,7 @@ const ContainerImg = styled.div`
 `;
 
 const ContainerModal = styled.div`
-  position: relative;
+ position: relative;
   width: 50%;
   height: 95%;
   background-color: white;
@@ -104,15 +104,20 @@ const ContainerModal = styled.div`
     font-size: 18px;
     color: #555;
   }
-
+.botoes-doacao{
+  margin: 0 auto;
+}
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
     border-radius: 0px;
-
+    .botoes-doacao{
+      width: 180px;
+      padding: 10px;
+      margin: 0 auto;
+    }
   }
-`;
-
+`
 function WishList(props) {
   const [Modal, setModal] = useState(false);
 
