@@ -3,6 +3,7 @@ import './estilo.css'
 import imagemLogo from '../../Assets/imagens/LogoMN.png'
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import ArrayHeader from "../ArrayHeader";
 
 const HeaderContainer = styled.header`
     background-color: #F04A00;
@@ -40,24 +41,8 @@ function Header() {
         return () => window.removeEventListener('resize', tela);
     }, []);
 
-    const opcoes = [
-        {
-            Link: '/',
-            Pagina: 'Home'
-        },
-        {
-            Link: '/informacoes',
-            Pagina: 'Informações'
-        },
-        {
-            Link: '/lista-de-presentes',
-            Pagina: 'Lista de presentes'
-        },
-        {
-            Link: 'https://docs.google.com/forms/d/e/1FAIpQLSd6m4HR6Rh5m-niA92uHhqGqeE_e6A1cG79SyGpmmki_VqxqQ/viewform',
-            Pagina: 'Confirmar presença'
-        }
-    ]
+    const opcoes = ArrayHeader();
+    
     return (
         <HeaderContainer>
             <nav>
