@@ -42,6 +42,7 @@ function WishList(props) {
   function statusModal() {
     setModal(!IsModal);
   }
+
   function statusModalPix() {
     setModalPix(!IsModalPix);
   }
@@ -51,13 +52,11 @@ function WishList(props) {
       setModal(false);
     }
   }
+
   function ClickForaDoModalPix(e) {
     if (e.target === e.currentTarget) {
       setModalPix(false);
     }
-  }
-  function ClickAmazon() {
-    window.location.href = "https://www.amazon.com.br/hz/wishlist/ls/1YJB1CH3PNW96?ref_=wl_share"
   }
 
   return (
@@ -76,13 +75,14 @@ function WishList(props) {
           onClickForaDoModal={ClickForaDoModal}
           onClickStatusModal={statusModal}
           onClickStatusModalPix={statusModalPix}
-          onClickAmazon={ClickAmazon}
           img={props.img}
           nome={props.nome}
           preco={props.preco.toFixed(2)}
+          link={props.link}
         />
       </>
       )}
+      
       {IsModalPix && (
         <ModalPix
           onClickForaDoModal={ClickForaDoModalPix}

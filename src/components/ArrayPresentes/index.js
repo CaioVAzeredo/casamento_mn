@@ -3,15 +3,15 @@ function ArrayPresentes() {
         {
             nome: "Caixa de Chá Oceanstar TB1323, Bambu",
             preco: 118.93,
-            pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            pix: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/caixa-de-cha-qrcode.png",
+            link: "https://www.amazon.com.br/dp/B00BNRO5UU/?coliid=I24JYRWHJQ4OCN&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/caixa-de-cha.png"
         },
         {
             nome: "Cama Casal Multifuncional Madeira Maciça",
             preco: 2341.16,
-            pix: "imagem pix QRCode",
+            pix: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/cama-casal-multifuncional-qrcode.png",
             link: "Link do produto na amazon",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/cama-casal-multifuncional.png"
@@ -266,7 +266,7 @@ function ArrayPresentes() {
             nome: "Lampada Smart Wi-Fi Positivo RGB",
             preco: 37.90,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B082FTRR76/?coliid=I2A4PW9YE3V60G&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it_im",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/lampada-smart.png"
         },
@@ -274,7 +274,7 @@ function ArrayPresentes() {
             nome: "Porto Brasil Prato Fundo Orgânico Preto Matte",
             preco: 159.24,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B08NGQYWBF/?coliid=I1G954OZPONNKS&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/porto-brasil-fundo-organico.png"
         },
@@ -282,7 +282,7 @@ function ArrayPresentes() {
             nome: "Porto Brasil Prato Sobremesa Preto Matte",
             preco: 185.34,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B08TRBPGRL/?coliid=I1E3VO47USEBIO&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/porto-brasil-prato-sobremesa.png"
         },
@@ -290,7 +290,7 @@ function ArrayPresentes() {
             nome: "The Resistance (Jogo de Cartas)",
             preco: 149.99,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B07CK3V7CN/?coliid=ITFE5BNANS00O&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it_im",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/galapagos.png"
         },
@@ -298,7 +298,7 @@ function ArrayPresentes() {
             nome: "Tramontina Panela de Pressão Vancouver 4,5L",
             preco: 159.85,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B076H7QYCH/?coliid=I26KQDXZERHE6G&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/tramontina-vancouver.png"
         },
@@ -306,7 +306,7 @@ function ArrayPresentes() {
             nome: "Lyor Faqueiro de Aço Inox Dourado 24 Peças",
             preco: 119.61,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B08W9GG6ZB/?coliid=I2WCIJOC9XFBJK&colid=1YJB1CH3PNW96&ref_=list_c_wl_lv_vv_lig_dp_it&th=1",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/lyor-faqueiro-de-aço-inox.png"
         },
@@ -314,15 +314,15 @@ function ArrayPresentes() {
             nome: "Jogo de 3 Facas Inox Hamilton Beach Com Tábua Grey Stone",
             preco: 99.90,
             pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            link: "https://www.amazon.com.br/dp/B0CLVS28NX/?coliid=I19LEPP7F5IQ1D&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it_im",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Jode-de-3-facas.png"
         },
         {
             nome: "Pedra para Afiar Dupla Face Suprema, Brinox, Cinza, 20 x 5 cm",
             preco: 42.90,
-            pix: "imagem pix QRCode",
-            link: "Link do produto na amazon",
+            pix: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/pedra-para-afiar-qrcode.png",
+            link: "https://www.amazon.com.br/dp/B07QMNXPXL/?coliid=I1WJGV8RMTS6KB&colid=1YJB1CH3PNW96&ref_=list_c_wl_lv_vv_lig_dp_it_im&th=1",
             chavePix: "chave pix aqui chave pix aqui chave pix aqui chave pix aqui",
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/pedra-para-afiar.png"
         }

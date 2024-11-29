@@ -32,16 +32,16 @@ const DivPresentes = styled.div`
 `;
 
 function ListaDePresentes() {
-    const presentes = ArrayPresentes();
+  const presentes = ArrayPresentes();
 
-    return (
-        <SectionPresente>
-            <ContainerH1 conteudo = 'Lista de presentes'/>
-            <DivPresentes>
-                {presentes.map(presente => <WishList nome={presente.nome} preco={presente.preco} img={presente.imagem} />)}
-            </DivPresentes>
-        </SectionPresente>
-    )
+  return (
+    <SectionPresente>
+      <ContainerH1 conteudo='Lista de presentes' />
+      <DivPresentes>
+        {presentes.map(presente => <WishList nome={presente.nome} preco={presente.preco} img={presente.imagem} link={presente.link} pix={presente.pix} />)}
+      </DivPresentes>
+    </SectionPresente>
+  )
 };
 
 export default ListaDePresentes;

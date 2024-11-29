@@ -21,8 +21,6 @@ h1,h2{
 }
 `
 
-
-
 function NotFound() {
     function PagInicial() {
         window.location.href = "/"
