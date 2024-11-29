@@ -12,46 +12,11 @@ const ContainerInformacaoDiv = styled.div`
   gap: 5px; 
   justify-items: center; 
   padding: 50px 0 ;
-
-  .quando {
-    background-color: black;
-    width: 300px;
-    height: 400px;
-  }
-  
-  .onde {
-    background-color: blue;
-    width: 300px;
-    height: 400px;
-  }
-  
-  .vestes {
-    background-color: red;
-    width: 300px;
-    height: 400px;
-  }
-h2{
-  color: var(--cor-primaria);
-  font-family: "Poppins", sans-serif;
+  @media(max-width: 1603px) {
+    
 }
-p{
-  text-align: center;
-  color: var(--cor-primaria);
-  font-family: "Poppins", sans-serif;
-  font-size: 25px;
-  width: 200px;
-  margin: 0 auto;
-}
-
-
   @media(max-width: 1024px) {
     grid-template-columns: repeat(1, 1fr);
-    h2{
-      margin: 0px;
-      }
-    p{
-      margin-bottom: 40px;
-    }
   }
 
   @media (min-width: 2000px) {
