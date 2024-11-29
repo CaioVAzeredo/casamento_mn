@@ -109,10 +109,7 @@ const ContainerModal = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 0px;
-.botoes-doacao{
-  display: flex;
-  justify-content: center;
-}
+
   }
 `;
 
@@ -152,7 +149,7 @@ function WishList(props) {
             <p>R$ {props.preco.toFixed(2)}</p>
             <div className="botoes-doacao">
               <Button informacao="Presentear por pix" onClick={statusModal} />
-              <Button informacao="Comprar pela Amazon" onClick={statusModal} />
+              <Button informacao="Presentear pela Amazon" onClick={statusModal} />
             </div>
           </ContainerModal>
         </Overlay>

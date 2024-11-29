@@ -8,6 +8,7 @@ padding: 10px;
 background-color: var(--cor-primaria);
 border: none;
 border-radius: 5px;
+margin: 10px 20px;
 cursor: pointer;
 
 &:hover {
