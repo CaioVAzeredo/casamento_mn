@@ -17,8 +17,8 @@ const ContainerForaDoModal = styled.div`
 
 const ContainerModal = styled.div`
  position: relative;
-  width: 50%;
-  height: 95%;
+  width: 45%;
+  height: 75%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -43,11 +43,15 @@ const ContainerModal = styled.div`
 
   p {
     font-size: 18px;
-    color: #555;
   }
 .botoes-doacao{
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  width: 55%;
+  height: 75%;
+}
+
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
