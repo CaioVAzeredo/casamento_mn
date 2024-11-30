@@ -106,7 +106,6 @@ function ArrayPresentes() {
             chave_pix: chave_pix,
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/cestos-organizador-de-palha.png"
         },
-        // Novos produtos adicionados:
         {
             nome: "Conjunto de 6 Pratos Rasos Orgânico Preto",
             preco: 225.99,
