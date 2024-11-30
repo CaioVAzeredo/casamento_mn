@@ -38,7 +38,16 @@ function ListaDePresentes() {
     <SectionPresente>
       <ContainerH1 conteudo='Lista de presentes' />
       <DivPresentes>
-        {presentes.map(presente => <WishList nome={presente.nome} preco={presente.preco} img={presente.imagem} link={presente.link} pix={presente.pix} />)}
+        {presentes.map(
+          presente => <WishList 
+          nome={presente.nome} 
+          preco={presente.preco}
+          img={presente.imagem} 
+          link={presente.link} 
+          pix={presente.pix} 
+          chave_pix={presente.chave_pix}
+          />
+        )}
       </DivPresentes>
     </SectionPresente>
   )

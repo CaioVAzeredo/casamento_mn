@@ -90,7 +90,7 @@ function WishList(props) {
           imgPix={props.pix}
           nomeProduto={props.nome}
           preco={props.preco.toFixed(2)}
-          chavePix={props.chavePix}
+          chave_pix={props.chave_pix}
         />
 
       )}

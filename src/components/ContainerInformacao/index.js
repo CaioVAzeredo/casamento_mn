@@ -36,7 +36,7 @@ p{
     
 `
 function ContainerInformacao({ informacoes }) {
-  return informacoes.map(informacao => <InformacaoDiv><img src={informacao.img} alt={informacao.alt}></img><h2>{informacao.info1}:</h2><p>{informacao.info2}</p></InformacaoDiv>
+  return informacoes.map(informacao => <InformacaoDiv><img src={informacao.img} alt={informacao.alt}></img><h2>{informacao.titulo}:</h2><p>{informacao.descricao}</p></InformacaoDiv>
   )
 }
 
