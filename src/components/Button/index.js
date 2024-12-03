@@ -16,8 +16,8 @@ cursor: pointer;
     transform: scale(1.05); 
   }
 `
-function Button(props) {
-  return <ContainerButton onClick={props.onClick} type={props.type || "button"} > {props.informacao}</ContainerButton >
+function Button({onClick, type="text",informacao}) {
+  return <ContainerButton onClick={onClick} type={type} > {informacao}</ContainerButton >
 }
 
 export default Button
