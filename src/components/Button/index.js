@@ -17,7 +17,7 @@ cursor: pointer;
   }
 `
 function Button(props) {
-    return <ContainerButton onClick={props.onClick}>{props.informacao}</ContainerButton>
+  return <ContainerButton onClick={props.onClick} type={props.type || "button"} > {props.informacao}</ContainerButton >
 }
 
 export default Button

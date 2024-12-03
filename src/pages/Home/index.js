@@ -17,29 +17,26 @@ main {
 }`
 
 function Body() {
-    const [timeLeft, setTimeLeft] = useState('0 dias 00:00:00');
+    const [timeLeft, setTimeLeft] = useState('');
 
     useEffect(() => {
-        const targetDate = new Date("2025-05-31T00:00:00");
+        const diaDoCasamento = new Date("2025-05-31T16:30:00");
 
-        const interval = setInterval(() => {
-            const now = new Date();
-            const difference = targetDate - now;
+        setInterval(() => {
+            const agora = new Date();
+            const diferencaDeDias = diaDoCasamento - agora;
 
-            if (difference <= 0) {
-                clearInterval(interval);
-                setTimeLeft("0 dias 00:00:00");
+            if (diferencaDeDias <= 0) {
+                setTimeLeft("0 0:00:00");
             } else {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0');
-                const minutes = String(Math.floor((difference / (1000 * 60)) % 60)).padStart(2, '0');
-                const seconds = String(Math.floor((difference / 1000) % 60)).padStart(2, '0');
+                const dias = Math.floor(diferencaDeDias / (1000 * 60 * 60 * 24));
+                const horas = String(Math.floor((diferencaDeDias / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+                const minutos = String(Math.floor((diferencaDeDias / (1000 * 60)) % 60)).padStart(2, '0');
+                const segundos = String(Math.floor((diferencaDeDias / 1000) % 60)).padStart(2, '0');
 
-                setTimeLeft(`${days}  ${hours}:${minutes}:${seconds}`);
+                setTimeLeft(`${dias}  ${horas}:${minutos}:${segundos}`);
             }
         }, 1000);
-
-        return () => clearInterval(interval);
     }, []);
 
     return (
