@@ -22,12 +22,13 @@ const CampoContainer = styled.div`
         outline: none;
     }
 `;
-function CampoTextarea({ name, label, placeholder, aoAlterado }) {
+function CampoTextarea({ name, label, placeholder, aoAlterado, valor }) {
     return (<CampoContainer>
         <label>{label}</label>
         <textarea
             placeholder={placeholder}
             name={name}
+            value={valor}
             onChange={(evento) => aoAlterado(evento.target.value)}
         />
     </CampoContainer>

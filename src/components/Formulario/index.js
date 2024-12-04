@@ -3,8 +3,8 @@ import ContainerH1 from "../ContainerH1";
 import Button from "../Button";
 import Campo from "../Campo";
 import CampoRadio from "../CampoRadio";
-import CampoTextarea from "../CampoTextarea";
 import styled from "styled-components";
+import CampoTextarea from "../CampoTextarea";
 
 const CampoFormulario = styled.form`
 margin: 0 auto;
@@ -96,7 +96,7 @@ h4{
 }
 `
 
-function Formulario() {
+function Formulario({ AdicionarPrenca }) {
     const [nome, setNome] = useState('');
     const [convidado, setConvidado] = useState('');
     const [msg, setMsg] = useState('');
@@ -108,7 +108,13 @@ function Formulario() {
         setConvidado('');
         setMsg('');
         setResposta('');
-        console.log(`${nome}; ${convidado}; ${msg}; ${resposta}`)
+
+        AdicionarPrenca({
+            nome: nome,
+            convidado: convidado,
+            msg: msg,
+            resposta: resposta
+        })
     };
 
     const LimparFormulario = () => {
@@ -177,6 +183,7 @@ function Formulario() {
                     name='message'
                     placeholder="Sua mensagem aqui.."
                     label="Quer deixar uma mensagem para o casal?"
+                    valor={msg}
                     aoAlterado={(valor) => setMsg(valor)}
                 />
             </div>
