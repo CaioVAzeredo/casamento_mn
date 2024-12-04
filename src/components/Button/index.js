@@ -10,13 +10,14 @@ border: none;
 border-radius: 5px;
 margin: 10px 20px;
 cursor: pointer;
+padding: 10px 25px;
 
 &:hover {
     background-color: #014166; 
     transform: scale(1.05); 
   }
 `
-function Button({onClick, type="text",informacao}) {
+function Button({ onClick, type = "text", informacao }) {
   return <ContainerButton onClick={onClick} type={type} > {informacao}</ContainerButton >
 }
 

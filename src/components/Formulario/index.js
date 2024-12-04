@@ -2,6 +2,95 @@ import { useState } from "react";
 import ContainerH1 from "../ContainerH1";
 import Button from "../Button";
 import Campo from "../Campo";
+import CampoRadio from "../CampoRadio";
+import CampoTextarea from "../CampoTextarea";
+import styled from "styled-components";
+
+const CampoFormulario = styled.form`
+margin: 0 auto;
+width: 640px;
+
+.cabecalho, .nome, .radio, .convidado, .textArea{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 25px;
+}
+
+h1{
+    padding: 10px;
+}
+
+h3{
+    color: #014166;
+    width: 90%;
+    text-align: center;
+    margin-left: 20px;
+}
+
+hr {
+        width: 500px;
+        color: #014166;
+        background-color: #014166;
+        height: 1px;
+        border: none;
+        margin: 20px auto;
+      }
+      
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: block;
+    border-radius: 0px;
+    width: 150px;
+    
+}
+label{
+    margin-bottom: 45px;
+}
+h4{
+    margin-top: 0px;
+}
+
+.radio input{
+    width: 50px;
+    color: red;
+    margin-top: 30px;
+}
+
+.suaResposta{
+    margin-top: 10px;
+}
+
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+.botaoLimparFormulario{
+    color: var(--cor-primaria);
+    background-color: #FFE0E4;
+    border: none;
+    font-size: 15px;
+}
+.botaoLimparFormulario:hover{
+    cursor: pointer;
+}
+@media(max-width: 1200px) {
+    margin: 0 auto;
+    width: 100%;
+
+    h1{
+        width: 80%;
+    }
+    
+    hr{
+        width: 80%;
+        font-size: 30px;
+    }
+}
+`
 
 function Formulario() {
     const [nome, setNome] = useState('');
@@ -14,16 +103,26 @@ function Formulario() {
         setNome('');
         setConvidado('');
         setMsg('');
-        console.log(`${nome}; ${convidado}; ${msg}`)
+        setResposta('');
+        console.log(`${nome}; ${convidado}; ${msg}; ${resposta}`)
     };
 
-    function handleRadioChange(valor) {
-
+    const LimparFormulario = () => {
+        setNome('');
+        setConvidado('');
+        setMsg('');
+        setResposta('');
     }
+
     return (
-        <>
-            <form onSubmit={aoSubmeter}>
+        <CampoFormulario onSubmit={aoSubmeter}>
+            <div className="cabecalho">
                 <ContainerH1 conteudo="Confirme sua presença" />
+                <h3>Por favor, confirme a sua presença e da sua família neste formulário, para que possamos nos organizar. </h3>
+                <hr />
+                <p style={{ color: 'red' }}>* Indica uma pergunta obrigatória</p>
+            </div>
+            <div className="nome">
                 <Campo
                     obrigatorio={true}
                     label="Nome"
@@ -31,59 +130,57 @@ function Formulario() {
                     valor={nome}
                     aoAlterado={(valor) => setNome(valor)}
                 />
+            </div>
+
+            <div className="radio">
+                <h4>Você virá ao nosso casamento? <span style={{ color: 'red' }}>*</span></h4>
+                <div>
+                    <CampoRadio
+                        obrigatorio={true}
+                        label={"Sim, eu não perderia isso por nada!"}
+                        type="radio"
+                        name="casamento"
+                        value="sim"
+                        checked={resposta === 'sim'}
+                        aoAlterado={(valor) => setResposta(valor)}
+                    />
+                </div>
+                <div>
+                    <CampoRadio
+                        obrigatorio={true}
+                        label={"Não, infelizmente eu não vou conseguir, mas fiquem tranquilos porque eu amo vocês da mesma forma"}
+                        type="radio"
+                        name="casamento"
+                        value="nao"
+                        checked={resposta === 'nao'}
+                        aoAlterado={(valor) => setResposta(valor)}
+                    />
+                </div>
+                <p className="suaResposta"> <strong>Sua resposta:</strong> {resposta === 'sim' ? 'Sim, estarei lá!' : resposta === 'nao' ? 'Infelizmente, não poderei ir :(' : 'Nenhuma resposta selecionada'}</p>
+            </div>
+
+            <div className="convidado">
                 <Campo
                     obrigatorio={false}
-                    label="Quer confirmar a presença de mais alguém que vai com você? Se sim, quem?"
+                    label="Quer confirmar a presença de mais alguém que vai com você? Se sim, quem?(Coloque o nome das pessoas)"
                     valor={convidado}
                     aoAlterado={(valor) => setConvidado(valor)}
+
                 />
-                {/* ----------------------------------- */}
-                <div>
-                    <h3>Você virá ao nosso casamento? <span style={{ color: 'red' }}>*</span></h3>
-                    <div>
-                        <Campo
-                            obrigatorio={true}
-                            type="radio"
-                            label={""}
-                            valor={resposta}
-                            aoAlterado={(valor) => setResposta(valor)}
-                        />
-                        <label>
-                            <input
-                                type="radio"
-                                name="casamento"
-                                value="sim"
-                                checked={resposta === 'sim'}
-                                onChange={(e) => handleRadioChange(e.target.value)}
-                            />
-                            Sim, eu não perderia isso por nada
-                        </label>
-                    </div>
-                    <div>
-                        <label>
-                            <input
-                                type="radio"
-                                name="casamento"
-                                value="nao"
-                                checked={resposta === 'nao'}
-                                onChange={(e) => handleRadioChange(e.target.value)}
-                            />
-                            Não, infelizmente eu não vou conseguir, mas fiquem tranquilos porque eu amo vocês da mesma forma
-                        </label>
-                    </div>
-                    <p>Sua resposta: {resposta === 'sim' ? 'Sim, estarei lá!' : resposta === 'nao' ? 'Infelizmente, não poderei ir.' : 'Nenhuma resposta selecionada'}</p>
-                </div>
-                {/* ----------------------------------- */}
-                <Campo
-                    obrigatorio={false}
+            </div>
+            <div className="textArea">
+                <CampoTextarea
+                    name='message'
+                    placeholder="Sua mensagem aqui.."
                     label="Quer deixar uma mensagem para o casal?"
-                    valor={msg}
                     aoAlterado={(valor) => setMsg(valor)}
                 />
-
+            </div>
+            <div className="botoes">
                 <Button informacao="Enviar" type="submit" />
-            </form>
-        </>
+                <button onClick={LimparFormulario} className="botaoLimparFormulario">Limpar formulário</button>
+            </div>
+        </CampoFormulario>
     );
 }
 

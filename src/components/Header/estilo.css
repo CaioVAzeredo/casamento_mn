@@ -101,15 +101,13 @@ nav {
     background: #4b4b4a4f;
   }
   
-  /* Ajustes para telas menores */
   @media (max-width: 768px) {
     .EspacoEmBranco {
       left: -83%;
-      width: 83%; /* Mais espaço disponível em telas pequenas */
+      width: 83%; 
     }
   }
   
-  /* Ajustes para telas muito pequenas */
   @media (max-width: 480px) {
     .EspacoEmBranco {
       left: -72%;

@@ -23,10 +23,10 @@ const CampoContainer = styled.div`
     }
 `;
 
-function Campo({ type = 'text', label, placeholder="Sua resposta", valor, aoAlterado, obrigatorio = false}) {
+function Campo({ type = 'text', label, placeholder = "Sua resposta", valor, aoAlterado, obrigatorio = false }) {
     return (
         <CampoContainer>
-            <label>{label}</label>
+            <label>{label} {label === "Nome" ? <span style={{ color: 'red' }}>*</span> : <span style={{ display: 'none' }}>*</span>}</label>
             <input
                 type={type}
                 value={valor}
