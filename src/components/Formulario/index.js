@@ -79,7 +79,7 @@ h4{
 }
 @media(max-width: 1200px) {
     margin: 0 auto;
-    width: 100%;
+    width: 60%;
 
     h1{
         width: 80%;
@@ -89,6 +89,10 @@ h4{
         width: 80%;
         font-size: 30px;
     }
+}
+@media(max-width: 600px) {
+    width: 80%;
+
 }
 `
 
