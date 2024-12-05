@@ -96,7 +96,7 @@ h4{
 }
 `
 
-function Formulario({ AdicionarPrenca }) {
+function Formulario({ AdicionarPrensenca }) {
     const [nome, setNome] = useState('');
     const [convidado, setConvidado] = useState('');
     const [msg, setMsg] = useState('');
@@ -104,12 +104,13 @@ function Formulario({ AdicionarPrenca }) {
 
     const aoSubmeter = (e) => {
         e.preventDefault();
+        
         setNome('');
         setConvidado('');
         setMsg('');
         setResposta('');
 
-        AdicionarPrenca({
+        AdicionarPrensenca({
             nome: nome,
             convidado: convidado,
             msg: msg,
