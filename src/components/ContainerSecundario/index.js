@@ -35,8 +35,12 @@ width:60%;
 `
 
 const ContainerSectionSecundario = styled.section`
+    button{
+        margin-left:30vw;
+    }   
+
 @media(max-width: 768px) {
-    /* ------------------------------------------------ */
+    
     position: relative;
 
     .SegundaImgTablet {
@@ -66,6 +70,9 @@ const ContainerSectionSecundario = styled.section`
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    button{
+        margin-left:45%;
+    }
     .imgPequeno {
         display: none;
     }
@@ -143,7 +150,6 @@ const ContainerSectionSecundario = styled.section`
 
     }
 
-    /* ------------------------------------ */
     .SegundaImgPequeno {
         display: none;
     }
@@ -155,7 +161,9 @@ const ContainerSectionSecundario = styled.section`
 }
 
 @media screen and (min-width: 1025px) {
-
+    button{
+    margin-left: 220px;
+}
 
     main {
         height: 1000px;
@@ -171,7 +179,6 @@ const ContainerSectionSecundario = styled.section`
         display: none;
     }
 
-    /* --------------------------------- */
     .SegundaImgPequeno {
         display: none;
     }
@@ -191,14 +198,10 @@ const ContainerSectionSecundario = styled.section`
         height: 692px;
         margin: 0 1px;
         position: relative;
-        /* Fixar a imagem na tela */
         z-index: 1;
         top: -100px;
-        /* Ajuste a posição vertical conforme necessário */
         left: 50%;
-        /* Posiciona horizontalmente no centro */
         transform: translateX(-50%);
-        /* Alinha a imagem exatamente no centro */
         flex-direction: column;
     }
 
@@ -303,6 +306,7 @@ function ContainerSecundario() {
                     sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum...
                 </ContainerParagrafo>
+
                 <Button informacao="Ler mais" onClick={estadoModal} />
             </div>
         </ContainerSectionSecundario>

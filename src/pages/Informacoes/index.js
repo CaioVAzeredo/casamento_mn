@@ -47,7 +47,7 @@ function Informacoes() {
     const fetchInformacoes = async () => {
 
       try {
-        const resposta = await fetch('');
+        const resposta = await fetch(''); 
 
         if (!resposta.ok) {
           throw new Error(`Erro ao buscar informações: ${resposta.statusText}`);
