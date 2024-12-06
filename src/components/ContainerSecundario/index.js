@@ -3,6 +3,8 @@ import styled from "styled-components"
 import SegundaImagemTelaPequena from '../../Assets/imagens/segundaImagem-tela-pequena.png'
 import SegundaImagemTelaTablet from '../../Assets/imagens/segundaImagem-tela-tablet.png'
 import SegundaImagemTelaGrande from '../../Assets/imagens/segundaImagem-tela-grande.png'
+import ModalSobreNos from '../ModalSobreNos'
+
 import Button from "../Button"
 import { useState } from "react"
 
@@ -282,11 +284,19 @@ const ContainerSectionSecundario = styled.section`
 `
 
 function ContainerSecundario() {
-    const [Modal, setModal] = useState(false)
+    const [Modal, setModal] = useState(false);
 
-    function estadoModal() {
-        setModal(!Modal)
+    function statusModal() {
+        setModal(!Modal);
     }
+
+
+    function ClickForaDoModal(e) {
+        if (e.target === e.currentTarget) {
+            setModal(false);
+        }
+    }
+
     return (
         <ContainerSectionSecundario>
             <img src={SegundaImagemTelaPequena} alt='Tela pequena' className='SegundaImgPequeno' />
@@ -306,8 +316,12 @@ function ContainerSecundario() {
                     sint occaecat cupidatat non proident, sunt in
                     culpa qui officia deserunt mollit anim id est laborum...
                 </ContainerParagrafo>
-
-                <Button informacao="Ler mais" onClick={estadoModal} />
+                {Modal && (<ModalSobreNos
+                    onClickForaDoModal={ClickForaDoModal}
+                    onClickStatusModal={statusModal}
+                />
+                )}
+                <Button informacao="Ler mais" onClick={statusModal} />
             </div>
         </ContainerSectionSecundario>
     )
