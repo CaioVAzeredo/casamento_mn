@@ -52,16 +52,16 @@ function ListaDePresentes() {
     const fetchPresentes = async () => {
 
       try {
-        const resposta = await fetch('');
+        const resposta = await fetch('https://api-casamentomn.azurewebsites.net/api/Presente');
         if (!resposta.ok) {
           throw new Error(`Erro ao buscas lista de presentes: ${resposta.statusText}`);
         }
         const dados = await resposta.json();
         setPresentes(dados);
       } catch (erro) {
-        console.log('Erro ao buscar lista de presentes');
+        console.error('Erro ao consumir API: ', erro);
 
-        setPresentes(ArrayPresentes());
+        /* setPresentes(ArrayPresentes()); */
       } finally {
         setLoading(false)
       }
