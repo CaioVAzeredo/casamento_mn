@@ -4,6 +4,7 @@ import Button from "../../components/Button"
 const ContainerNotFound = styled.div`
 color: var(--cor-primaria);
 width: 50%;
+height: 90vh;
 margin: 0 auto;
 align-items: center;
 display: flex;

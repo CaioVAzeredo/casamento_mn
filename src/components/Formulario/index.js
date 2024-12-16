@@ -99,7 +99,7 @@ h4{
 function Formulario({ AdicionarPrensenca }) {
     const [nome, setNome] = useState('');
     const [convidado, setConvidado] = useState('');
-    const [msg, setMsg] = useState('');
+    const [mensagem, setMensagem] = useState('');
     const [resposta, setResposta] = useState('');
 
     const aoSubmeter = (e) => {
@@ -107,13 +107,13 @@ function Formulario({ AdicionarPrensenca }) {
         
         setNome('');
         setConvidado('');
-        setMsg('');
+        setMensagem('');
         setResposta('');
 
         AdicionarPrensenca({
             nome: nome,
             convidado: convidado,
-            msg: msg,
+            mensagem: mensagem,
             resposta: resposta
         })
     };
@@ -121,7 +121,7 @@ function Formulario({ AdicionarPrensenca }) {
     const LimparFormulario = () => {
         setNome('');
         setConvidado('');
-        setMsg('');
+        setMensagem('');
         setResposta('');
     }
 
@@ -184,8 +184,8 @@ function Formulario({ AdicionarPrensenca }) {
                     name='message'
                     placeholder="Sua mensagem aqui.."
                     label="Quer deixar uma mensagem para o casal?"
-                    valor={msg}
-                    aoAlterado={(valor) => setMsg(valor)}
+                    valor={mensagem}
+                    aoAlterado={(valor) => setMensagem(valor)}
                 />
             </div>
             <div className="botoes">
