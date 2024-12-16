@@ -2,12 +2,21 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ContainerH1 from "../../components/ContainerH1";
 
+const ConainerFora = styled.div`
+padding-bottom: 30px;
+`
+
 const ContainerPresenca = styled.div`
 background-color: white;
 width: 600px;
 margin: 10px auto;
 padding: 10px;
 border-radius: 10px;
+
+@media(max-width: 600px) {
+    width: 80%;
+
+}
 `
 const Carregamento = styled.div`
 height: 100vh;
@@ -39,31 +48,45 @@ function PaginaDosNoivos() {
             } catch (erro) {
                 setErro("Informações indisponíveis no momento.. Procure o suporte!");
                 console.error("Erro ao buscar dados:", erro);
-            } finally{
+            } finally {
                 setLoading(false);
             }
         }
         fetchList();
     }, []);
 
-    if(loading){
+    if (loading) {
         return <Carregamento>
-        <p>Carregando informações...</p>
-      </Carregamento>
+            <p>Carregando informações...</p>
+        </Carregamento>
     }
 
     return (<>
 
         <ContainerH1 conteudo="Lista de presença" />
-    {erro && <div>Erro ao carregar a pagina..</div>}
-        {listPresenca.map(
-            presenca => <ContainerPresenca>
-                nome: {presenca.nome};
-                vai ao casamento? {presenca.resposta}
-                Presença de mais alguém? {presenca.convidado}
-                Mensagem aos noivos: {presenca.mensagem}
+        {erro && <div>Erro ao carregar a pagina..</div>}
+        <ConainerFora>
+            {listPresenca.map(
+                presenca => <ContainerPresenca>
+                <div >
+                    <p><strong>Nome:</strong></p>
+                    {presenca.nome}
+                </div>
+                <div>
+                    <p><strong>Vai ao casamento?</strong></p>
+                    {presenca.resposta}
+                </div>
+                <div>
+                    <p><strong>Presença de mais alguém?</strong></p>
+                    {presenca.convidado ? presenca.convidado : "Sem Informação"}
+                </div>
+                <div className="divMsg">
+                    <p><strong>Mensagem aos noivos:</strong></p>
+                    {presenca.mensagem ? presenca.mensagem : "Sem Informação"}
+                </div>
             </ContainerPresenca>
         )}
+        </ConainerFora>
     </>
     )
 }

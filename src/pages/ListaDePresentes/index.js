@@ -46,6 +46,7 @@ p{
 function ListaDePresentes() {
 
   const [presentes, setPresentes] = useState([]);
+  const [erro, setErro] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -59,9 +60,8 @@ function ListaDePresentes() {
         const dados = await resposta.json();
         setPresentes(dados);
       } catch (erro) {
-        console.error('Erro ao consumir API: ', erro);
-
-        /* setPresentes(ArrayPresentes()); */
+        setErro("Informações indisponíveis no momento.. Procure o suporte!");
+        console.error("Erro ao buscar dados:", erro);
       } finally {
         setLoading(false)
       }
@@ -79,6 +79,7 @@ function ListaDePresentes() {
   return (
     <SectionPresente>
       <ContainerH1 conteudo='Lista de presentes' />
+      {erro && <div>Erro ao carregar a página..</div>}
       <DivPresentes>
         {presentes.map(
           presente => <WishList

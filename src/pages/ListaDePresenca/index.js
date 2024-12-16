@@ -26,7 +26,7 @@ function ListaDePresenca() {
                 console.error(`Erro: ${resposta.status} - ${resposta.statusText}`);
                 return;
             }
-
+            alert("Presença Confirmada!!")
             navigate("/pagina-de-sucesso");
 
         } catch (erro) {

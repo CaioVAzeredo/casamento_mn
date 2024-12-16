@@ -73,6 +73,7 @@ const ContainerSectionSecundario = styled.section`
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     button{
+        display: block;
         margin-left:45%;
     }
     .imgPequeno {
@@ -164,6 +165,7 @@ const ContainerSectionSecundario = styled.section`
 
 @media screen and (min-width: 1025px) {
     button{
+        display: none;
     margin-left: 220px;
 }
 
