@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import Formulario from "../../components/Formulario"
-import { useState } from "react"
 
 const ContainerForm = styled.section`
     width: 100vw;
@@ -9,35 +8,37 @@ const ContainerForm = styled.section`
 function ListaDePresenca() {
 
     const AdicionarPresenca = async (presenca) => {
-        const [arrayPresenca, setArrayPresenca] = useState([]);
-
+        
         try {
-            /* URL DA API */
-            const resposta = await fetch('', {
+            console.log("Enviando dados:", presenca);
+    
+            const resposta = await fetch('https://api-casamentomn.azurewebsites.net/api/Formulario', {
                 method: 'POST',
                 headers: {
-                    'Content_type': 'application/json',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(presenca),
             });
-
+    
             if (!resposta.ok) {
-                throw new Error(`Erro:  ${resposta.statusText}`);
+                console.error(`Erro: ${resposta.status} - ${resposta.statusText}`);
+                return;
             }
-
-            const novaPresenca = await resposta.json();
-            setArrayPresenca([...arrayPresenca, novaPresenca]);
-
+    
+            console.log("Presença adicionada com sucesso!");
+            const resultado = await resposta.json();
+            console.log("Resposta da API:", resultado);
+    
         } catch (erro) {
-            console.error('Presença adicionada com sucesso', erro);
-            alert('Não possível adicionar a presença. Tente novamente mais tarde.');
+            console.error("Erro na requisição:", erro);
+            alert("Não foi possível adicionar a presença. Tente novamente mais tarde.");
         }
-
-    }
+    };
+    
 
     return (
         <ContainerForm>
-            <Formulario AdicionarPrenca={AdicionarPresenca} />
+            <Formulario AdicionarPrensenca ={AdicionarPresenca} />
         </ContainerForm>
     )
 }
