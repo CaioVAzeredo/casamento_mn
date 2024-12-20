@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ContainerH1 from "../../components/ContainerH1";
+import ImgFundo from "../../components/ImgFundo";
 
 const ConainerFora = styled.div`
 padding-bottom: 30px;
@@ -62,31 +63,32 @@ function PaginaDosNoivos() {
     }
 
     return (<>
-
+        <ImgFundo />
         <ContainerH1 conteudo="Lista de presença" />
         {erro && <div>Erro ao carregar a pagina..</div>}
         <ConainerFora>
             {listPresenca.map(
                 presenca => <ContainerPresenca>
-                <div >
-                    <p><strong>Nome:</strong></p>
-                    {presenca.nome}
-                </div>
-                <div>
-                    <p><strong>Vai ao casamento?</strong></p>
-                    {presenca.resposta}
-                </div>
-                <div>
-                    <p><strong>Presença de mais alguém?</strong></p>
-                    {presenca.convidado ? presenca.convidado : "Sem Informação"}
-                </div>
-                <div className="divMsg">
-                    <p><strong>Mensagem aos noivos:</strong></p>
-                    {presenca.mensagem ? presenca.mensagem : "Sem Informação"}
-                </div>
-            </ContainerPresenca>
-        )}
+                    <div >
+                        <p><strong>Nome:</strong></p>
+                        {presenca.nome}
+                    </div>
+                    <div>
+                        <p><strong>Vai ao casamento?</strong></p>
+                        {presenca.resposta}
+                    </div>
+                    <div>
+                        <p><strong>Presença de mais alguém?</strong></p>
+                        {presenca.convidado ? presenca.convidado : "Sem Informação"}
+                    </div>
+                    <div className="divMsg">
+                        <p><strong>Mensagem aos noivos:</strong></p>
+                        {presenca.mensagem ? presenca.mensagem : "Sem Informação"}
+                    </div>
+                </ContainerPresenca>
+            )}
         </ConainerFora>
+
     </>
     )
 }

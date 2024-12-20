@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
-
 import './estilo.css';
-
 import ContainerPrincipal from '../../components/ContainerPrincipal';
 import ContainerSecundario from '../../components/ContainerSecundario';
 import styled from 'styled-components';
+import ImgFundo from '../../components/ImgFundo';
 
 const ContainerMain = styled.main`
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1260px) {
 
 main {
     height: 1000px;
@@ -39,11 +38,13 @@ function Body() {
         }, 1000);
     }, []);
 
-    return (
+    return (<>
+        <ImgFundo />
         <ContainerMain>
             <ContainerPrincipal timer={timeLeft} />
             <ContainerSecundario />
         </ContainerMain>
+    </>
     );
 }
 

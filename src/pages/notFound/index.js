@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Button from "../../components/Button"
+import ImgFundo from "../../components/ImgFundo"
 
 const ContainerNotFound = styled.div`
 color: var(--cor-primaria);
@@ -26,12 +27,14 @@ function NotFound() {
     function PagInicial() {
         window.location.href = "/"
     }
-    return (
+    return (<>
+        <ImgFundo />
         <ContainerNotFound>
             <h1> Opss... Página nao encontrada</h1>
             <h2>Retorne para a página inicial do site clicando no botão abaixo</h2>
             <Button onClick={PagInicial} informacao="Voltar" />
         </ContainerNotFound>
+    </>
     )
 }
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import ImgFundo from "../../components/ImgFundo";
 
 const ContainerSucesso = styled.div`
     display: flex;
@@ -47,11 +48,14 @@ const ContainerSucesso = styled.div`
 
 function PaginaDeSucesso() {
     return (
+        <>
+        <ImgFundo/>
         <ContainerSucesso>
             <h1>🎉 Presença Confirmada! 🎉</h1>
             <p>Obrigado por confirmar sua presença. Estamos ansiosos para celebrar este momento especial com você!</p>
             <Link to="/">Voltar para a Página Inicial</Link>
         </ContainerSucesso>
+        </>
     );
 }
 

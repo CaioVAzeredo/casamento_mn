@@ -28,7 +28,7 @@ const ContainerSection = styled.section`
     .data {
         color: var(--cor-primaria);
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         font-family: "Poppins", sans-serif;
         font-weight: 400;
     }
@@ -36,7 +36,7 @@ const ContainerSection = styled.section`
     h2 {
         color: var(--cor-primaria);
         text-align: center;
-        font-size: 28px;
+        font-size: 23px;
     }
 
     .relogio {
@@ -45,24 +45,28 @@ const ContainerSection = styled.section`
     }
 
     .relogioInfo {
-        padding-left: 35px;
         padding-bottom: 5px;
         display: flex;
         justify-content: space-between;
         width: 80%;
-        font-size: 20px;
+        font-size: 15px;
     }
 
     p {
         color: var(--cor-primaria);
-        margin: 0;
+        margin: 0 auto;
+        
     }
 
     .contagem {
         color: var(--cor-primaria);
         text-align: center;
-        font-size: 50px;
+        font-size: 40px;
         margin: 0px;
+    }
+    .contagemRegressiva {
+        margin-top: -4px;
+        background-color: #FFE0E4;
     }
 
 }
@@ -181,6 +185,7 @@ height: 590px;
 
 
     .contagemRegressiva {
+        
         padding-top: 1px;
         width: 400px;
         height: 200px;

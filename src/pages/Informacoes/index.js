@@ -4,6 +4,7 @@ import ContainerH1 from '../../components/ContainerH1';
 import Arrayinformacoes from '../../components/ArrayInformacoes';
 import ContainerInformacao from '../../components/ContainerInformacao';
 import { useEffect, useState } from 'react';
+import ImgFundo from '../../components/ImgFundo';
 
 const ContainerInformacaoDiv = styled.section`
   display: grid;
@@ -47,7 +48,7 @@ function Informacoes() {
     const fetchInformacoes = async () => {
 
       try {
-        const resposta = await fetch(''); 
+        const resposta = await fetch('');
 
         if (!resposta.ok) {
           throw new Error(`Erro ao buscar informações: ${resposta.statusText}`);
@@ -76,8 +77,8 @@ function Informacoes() {
 
   return (
     <>
+      <ImgFundo />
       <ContainerH1 conteudo="Seja testemunha do nosso dia especial" />
-
       <ContainerInformacaoDiv>
         <ContainerInformacao informacoes={informacoesList} />
       </ContainerInformacaoDiv>

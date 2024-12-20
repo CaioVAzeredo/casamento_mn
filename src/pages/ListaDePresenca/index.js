@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Formulario from "../../components/Formulario"
 import { useNavigate } from "react-router-dom";
+import ImgFundo from "../../components/ImgFundo";
 
 const ContainerForm = styled.section`
     width: 100vw;
@@ -37,9 +38,12 @@ function ListaDePresenca() {
 
 
     return (
-        <ContainerForm>
-            <Formulario AdicionarPrensenca={AdicionarPresenca} />
-        </ContainerForm>
+        <>
+            <ImgFundo />
+            <ContainerForm>
+                <Formulario AdicionarPrensenca={AdicionarPresenca} />
+            </ContainerForm>
+        </>
     )
 }
 

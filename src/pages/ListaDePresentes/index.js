@@ -4,6 +4,7 @@ import WishList from "../../components/WishList"
 import ContainerH1 from "../../components/ContainerH1";
 import ArrayPresentes from "../../components/ArrayPresentes";
 import { useEffect, useState } from "react";
+import ImgFundo from "../../components/ImgFundo";
 
 const SectionPresente = styled.section`
 margin-bottom: 500px;
@@ -77,22 +78,25 @@ function ListaDePresentes() {
   }
 
   return (
+    <>
+    <ImgFundo/>
     <SectionPresente>
       <ContainerH1 conteudo='Lista de presentes' />
       {erro && <div>Erro ao carregar a página..</div>}
       <DivPresentes>
         {presentes.map(
           presente => <WishList
-            nome={presente.nome}
-            preco={presente.preco}
-            img={presente.imagem}
-            link={presente.link}
-            pix={presente.pix}
+          nome={presente.nome}
+          preco={presente.preco}
+          img={presente.imagem}
+          link={presente.link}
+          pix={presente.pix}
             chave_pix={presente.chave_pix}
-          />
-        )}
+            />
+          )}
       </DivPresentes>
     </SectionPresente>
+          </>
   )
 };
 
