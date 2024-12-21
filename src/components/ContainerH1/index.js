@@ -20,9 +20,12 @@ h1{
         margin: 20px auto;
       }
       @media(max-width: 768px) {
-h1, hr{
-    width: 80%;
+h1{
+    width: 75%;
     font-size: 30px;
+}
+hr{
+    width: 70%;
 }
 
       }

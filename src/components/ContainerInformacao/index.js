@@ -11,8 +11,9 @@ p{
   color: var(--cor-primaria);
   font-family: "Poppins", sans-serif;
   font-size: 25px;
-  width: 200px;
+  width: 450px;
   margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 @media(max-width: 1024px) {
@@ -27,10 +28,16 @@ p{
     img{
       width: 350px;
     }
+    p{
+        width: 200px;
+      }
   }   
     @media(max-width: 1317px) {
       img{
         width: 250px;
+      }
+      p{
+        width: 200px;
       }
     }
     
