@@ -5,6 +5,11 @@ import ImgFundo from "../../components/ImgFundo";
 
 const ConainerFora = styled.div`
 padding-bottom: 30px;
+.msgError{
+  width: 800px;
+  text-align: center;
+  margin: 100px auto;
+}
 `
 
 const ContainerPresenca = styled.div`
@@ -65,8 +70,8 @@ function PaginaDosNoivos() {
     return (<>
         <ImgFundo />
         <ContainerH1 conteudo="Lista de presença" />
-        {erro && <div>Erro ao carregar a pagina..</div>}
         <ConainerFora>
+        {erro && <div className="msgError">Erro ao carregar a pagina..</div>}
             {listPresenca.map(
                 presenca => <ContainerPresenca>
                     <div >

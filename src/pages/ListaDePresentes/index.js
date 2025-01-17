@@ -8,8 +8,12 @@ import ImgFundo from "../../components/ImgFundo";
 
 const SectionPresente = styled.section`
 margin-bottom: 500px;
+.msgError{
+  width: 800px;
+  text-align: center;
+  margin: 100px auto;
+}
 `;
-
 const DivPresentes = styled.div`
   margin: 0 auto;
   width: 80%;
@@ -79,24 +83,24 @@ function ListaDePresentes() {
 
   return (
     <>
-    <ImgFundo/>
-    <SectionPresente>
-      <ContainerH1 conteudo='Lista de presentes' />
-      {erro && <div>Erro ao carregar a página..</div>}
-      <DivPresentes>
-        {presentes.map(
-          presente => <WishList
-          nome={presente.nome}
-          preco={presente.preco}
-          img={presente.imagem}
-          link={presente.link}
-          pix={presente.pix}
-            chave_pix={presente.chave_pix}
+      <ImgFundo />
+      <SectionPresente>
+        <ContainerH1 conteudo='Lista de presentes' />
+        {erro && <div className="msgError">Pagina em manutenção..</div>}
+        <DivPresentes>
+          {presentes.map(
+            presente => <WishList
+              nome={presente.nome}
+              preco={presente.preco}
+              img={presente.imagem}
+              link={presente.link}
+              pix={presente.pix}
+              chave_pix={presente.chave_pix}
             />
           )}
-      </DivPresentes>
-    </SectionPresente>
-          </>
+        </DivPresentes>
+      </SectionPresente>
+    </>
   )
 };
 
