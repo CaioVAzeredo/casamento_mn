@@ -17,6 +17,9 @@ p{
 }
 
 @media(max-width: 1300px) {
+  img{
+    width: 250px;
+  }
     h2{
       margin: 0px;
       }

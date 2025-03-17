@@ -48,12 +48,13 @@ nav {
 }
 
 @media(max-width: 768px) {
-
+  .logo {
+    height: 50px;
+    }
   body {
     overflow-x: hidden;
   }
-
-
+  
   nav {
     display: flex;
     justify-content: space-between;
