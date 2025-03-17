@@ -3,6 +3,7 @@ import ImgameFundo from '../../Assets/imagens/fundo.png';
 
 const ContainerDiv = styled.div`
     position: fixed; 
+    z-index: 999; /* O modal fica abaixo da barra de rolagem */
     top: 0;
     left: 0;
     width: 100%;

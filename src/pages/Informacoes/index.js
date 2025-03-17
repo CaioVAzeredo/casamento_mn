@@ -18,7 +18,7 @@ const ContainerInformacaoDiv = styled.section`
   @media(max-width: 1603px) {
     
 }
-  @media(max-width: 1024px) {
+  @media(max-width: 1300px) {
     grid-template-columns: repeat(1, 1fr);
   }
 

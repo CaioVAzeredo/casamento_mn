@@ -10,8 +10,7 @@ a:hover {
 }
 
 .logo {
-  height: 40px;
-  width: 90px;
+height: 70px;
 }
 
 
@@ -54,11 +53,6 @@ nav {
     overflow-x: hidden;
   }
 
-  .logo {
-    height: 40px;
-    letter-spacing: 4px;
-
-  }
 
   nav {
     display: flex;

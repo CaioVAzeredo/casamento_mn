@@ -45,7 +45,7 @@ function PaginaDosNoivos() {
     useEffect(() => {
         const fetchList = async () => {
             try {
-                const resposta = await fetch('https://api-casamentomn.azurewebsites.net/api/Formulario');
+                const resposta = await fetch('https://localhost:7169/api/Formulario');
                 if (!resposta.ok) {
                     throw new Error(`Erro ao buscar lista de presença: ${resposta.statusText}`);
                 }

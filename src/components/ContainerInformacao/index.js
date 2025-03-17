@@ -16,7 +16,7 @@ p{
   padding-bottom: 30px;
 }
 
-@media(max-width: 1024px) {
+@media(max-width: 1300px) {
     h2{
       margin: 0px;
       }
@@ -24,18 +24,19 @@ p{
       margin-bottom: 40px;
     }
   }
-  @media(max-width: 1671px) {
-    img{
-      width: 350px;
-    }
+  @media(max-width: 1200px) {
+
     p{
         width: 200px;
       }
   }   
     @media(max-width: 1317px) {
-      img{
-        width: 250px;
+      p{
+        width: 200px;
       }
+    }
+    @media (min-width: 1317px) {
+
       p{
         width: 200px;
       }

@@ -14,7 +14,7 @@ function ListaDePresenca() {
         try {
             console.log("Enviando dados:", presenca);
 
-            const resposta = await fetch('https://api-casamentomn.azurewebsites.net/api/Formulario', {
+            const resposta = await fetch('https://localhost:7169/api/Formulario', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -27,7 +27,6 @@ function ListaDePresenca() {
                 console.error(`Erro: ${resposta.status} - ${resposta.statusText}`);
                 return;
             }
-            alert("Presença Confirmada!!")
             navigate("/pagina-de-sucesso");
 
         } catch (erro) {
