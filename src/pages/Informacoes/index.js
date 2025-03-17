@@ -39,6 +39,7 @@ p{
 }
 `
 
+
 function Informacoes() {
 
   const [informacoesList, setInformacoesList] = useState([]);

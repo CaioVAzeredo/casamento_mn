@@ -1,5 +1,7 @@
 import './App.css';
 import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
 import Informacoes from './pages/Informacoes';
@@ -8,21 +10,30 @@ import PaginaDeSucesso from './pages/PaginaDeSucesso';
 import ListaDePresenca from './pages/ListaDePresenca';
 import PaginaDosNoivos from './pages/PaginaDosNoivos';
 import NotFound from './pages/notFound';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Preload from './components/Preload'; // Importa a tela de Preload
 
 const AppContainer = styled.div`
     width: 100vw;
     height: 100vh;
-    z-index: 2; /* Camada superior ao ContainerDiv */
-    position: relative; /* Necessário para respeitar o z-index */
+    z-index: 2;
+    position: relative;
 `;
 
-
 function App() {
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        // Simula um carregamento de 2 segundos antes de exibir o conteúdo
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
+    }, []);
+
     return (
         <Router>
+            {isLoading && <Preload isLoading={isLoading} />}
             
-            <AppContainer>
+            <AppContainer style={{ display: isLoading ? 'none' : 'block' }}>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
