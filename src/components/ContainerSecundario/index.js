@@ -1,48 +1,52 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import SegundaImagemTelaPequena from '../../Assets/imagens/segundaImagem-tela-pequena.png'
-import SegundaImagemTelaTablet from '../../Assets/imagens/segundaImagem-tela-tablet.png'
-import SegundaImagemTelaGrande from '../../Assets/imagens/segundaImagem-tela-grande.png'
-import ModalSobreNos from '../ModalSobreNos'
+import SegundaImagemTelaPequena from '../../Assets/imagens/segundaImagem-tela-pequena.png';
+import SegundaImagemTelaTablet from '../../Assets/imagens/segundaImagem-tela-tablet.png';
+import SegundaImagemTelaGrande from '../../Assets/imagens/segundaImagem-tela-grande.png';
+import ModalSobreNos from '../ModalSobreNos';
 
-import Button from "../Button"
-import { useState } from "react"
+import Button from "../Button";
+import { useState } from "react";
 
 const Containerh1 = styled.h1`
 text-align: center;
 color: #F04A00;
 font-size: 40px;
-text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.5);
 
 @media screen and (min-width: 1025px) {
-width: 600px;
-text-align: center;
+    width: 600px;
+    text-align: center;
 }
-`
+`;
 
 const ContainerParagrafo = styled.p`
-color: #D24607;
-text-shadow: 2px 1px px rgba(0, 0, 0, 0.5);
+color: #f5621e;
 font-size: 20px;
-width: 80%;
+width: 100%;
 margin: 0 auto;
 padding-bottom: 15px;
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     font-size: 20px;
-padding-left: 23%;
-width:60%;
+    padding-left: 23%;
+    width: 60%;
 }
 
-`
+@media screen and (max-width: 1024px){
+    
+    text-shadow: 1px 1px 15px rgb(0, 0, 0);
+}
+
+`;
+
 
 const ContainerSectionSecundario = styled.section`
-    button{
-        margin-left:30vw;
+    button {
+        display: block;
+        margin-left: 30vw;
     }   
 
 @media(max-width: 768px) {
-    
     position: relative;
 
     .SegundaImgTablet {
@@ -67,15 +71,15 @@ const ContainerSectionSecundario = styled.section`
         left: 30px;
         width: 90%;
         z-index: 2;
-
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    button{
+    button {
         display: block;
-        margin-left:45%;
+        margin-left: 45%;
     }
+
     .imgPequeno {
         display: none;
     }
@@ -144,13 +148,11 @@ const ContainerSectionSecundario = styled.section`
         z-index: 1;
     }
 
-
     .ContainerTexto {
         position: absolute;
         left: 30px;
         width: 90%;
         z-index: 2;
-
     }
 
     .SegundaImgPequeno {
@@ -160,14 +162,13 @@ const ContainerSectionSecundario = styled.section`
     .SegundaImgGrande {
         display: none;
     }
-
 }
 
 @media screen and (min-width: 1025px) {
-    button{
-        display: none;
-    margin-left: 220px;
-}
+    button {
+        display: block;
+        margin-left: 43%;
+    }
 
     main {
         height: 1000px;
@@ -194,7 +195,6 @@ const ContainerSectionSecundario = styled.section`
     .principal {
         display: flex;
         height: 591px;
-
     }
 
     .imgMedia {
@@ -219,7 +219,6 @@ const ContainerSectionSecundario = styled.section`
         flex-direction: column;
     }
 
-
     .contagemRegressiva {
         padding-top: 1px;
         width: 400px;
@@ -228,8 +227,6 @@ const ContainerSectionSecundario = styled.section`
         margin: 0;
         z-index: 2;
     }
-
-
 
     h2 {
         color: var(--cor-primaria);
@@ -269,21 +266,27 @@ const ContainerSectionSecundario = styled.section`
 
     .SegundaImgGrande {
         z-index: 1;
-        position: relative; 
+        position: relative;
         height: 699px;
     }
-    
+
     .ContainerTexto {
         z-index: 2;
         position: relative;
-        z-index: 1;
         transform: translateX(-110%);
         flex-direction: column;
-
     }
-    
 }
-`
+  p:first-of-type,
+  p:nth-of-type(2) {
+    text-indent: 20px; 
+   
+}
+
+p.margem-superior {
+    margin-top: 20px;
+  }
+`;
 
 function ContainerSecundario() {
     const [Modal, setModal] = useState(false);
@@ -291,7 +294,6 @@ function ContainerSecundario() {
     function statusModal() {
         setModal(!Modal);
     }
-
 
     function ClickForaDoModal(e) {
         if (e.target === e.currentTarget) {
@@ -307,26 +309,23 @@ function ContainerSecundario() {
             <div className='ContainerTexto'>
                 <Containerh1>SOBRE NÓS</Containerh1>
                 <ContainerParagrafo>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Sed do eiusmod
-                    tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur
-                    sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum...
-                </ContainerParagrafo>
-                {Modal && (<ModalSobreNos
+                    <p>
+                        Dois conhecidos que se aproximaram por acaso. A gente se encontrava em um churrasco, um barzinho, uma festa junina de igreja, até que, em uma festa, eu pedi um beijo pra ela e ela recusou 😥.  Mas logo ela viu a besteira que tinha feito e voltou correndo pra mim. Desde então, nunca nos separamos. Começamos a sair e eu logo admiti estar apaixonado, ao que ela respondeu com um teimoso "não tá, não", mas no fundo ela sabia que tanto eu quanto ela estávamos.
+                    </p>
+                    <p>
+                        Nosso namoro começou na cafeteria preferida... </p>
+                </ContainerParagrafo >
+
+                <Button informacao="Ler mais" onClick={statusModal} />
+            </div>
+            {Modal && (
+                <ModalSobreNos
                     onClickForaDoModal={ClickForaDoModal}
                     onClickStatusModal={statusModal}
                 />
-                )}
-                <Button informacao="Ler mais" onClick={statusModal} />
-            </div>
+            )}
         </ContainerSectionSecundario>
-    )
+    );
 }
 
-export default ContainerSecundario
+export default ContainerSecundario;

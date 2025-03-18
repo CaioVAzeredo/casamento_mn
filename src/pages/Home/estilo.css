@@ -49,7 +49,7 @@
     }
 
     p {
-        color: var(--cor-primaria);
+        color: #f5621e;
         margin: 0;
     }
 
@@ -125,10 +125,6 @@
         font-size: 20px;
     }
 
-    p {
-        color: var(--cor-primaria);
-        margin: 0;
-    }
 
     .data {
         color: var(--cor-primaria);
@@ -273,7 +269,7 @@
     }
 
     p {
-        color: var(--cor-primaria);
+        color: #f5621e;
         margin: 0;
     }
 

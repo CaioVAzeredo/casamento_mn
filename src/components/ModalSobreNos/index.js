@@ -16,8 +16,8 @@ const ContainerForaDoModal = styled.div`
 
 const ContainerModal = styled.div`
  position: relative;
-  width: 45%;
-  height: 75%;
+  width: 35%;
+  height: 80%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -43,15 +43,25 @@ const ContainerModal = styled.div`
   p {
     font-size: 18px;
   }
+  p:first-of-type,
+  p:nth-of-type(2) {
+    text-indent: 20px; 
+   
+}
+
+p.margem-superior {
+    margin-top: 20px;
+  }
+
 .botoes-doacao{
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 948px) and (max-width: 1414px) {
   width: 55%;
   height: 75%;
 }
 
-  @media (max-width: 768px) {
+  @media (max-width: 948px) {
     width: 100%;
     height: 100%;
     border-radius: 0px;
@@ -62,24 +72,40 @@ const ContainerModal = styled.div`
     }
   }
 `;
+const Texto = styled.div`
+padding: 100px;
+@media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
 
+    p{
+      padding: 10px;
+    }
+  }
+`
 function ModalProduto({ onClickForaDoModal, onClickStatusModal }) {
 
   return (<ContainerForaDoModal onClick={onClickForaDoModal}>
     <ContainerModal>
       <CloseButton onClick={onClickStatusModal} />
-      <p>
-        Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex
-        ea commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate velit esse cillum
-        dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in
-        culpa qui officia deserunt mollit anim id est laborum...
-      </p>
+      <Texto>
+
+        <p>
+          Dois conhecidos que se aproximaram por acaso. A gente se encontrava em um churrasco, um barzinho, uma festa junina de igreja, até que, em uma festa, eu pedi um beijo pra ela e ela recusou 😥.  Mas logo ela viu a besteira que tinha feito e voltou correndo pra mim. Desde então, nunca nos separamos. Começamos a sair e eu logo admiti estar apaixonado, ao que ela respondeu com um teimoso "não tá, não", mas no fundo ela sabia que tanto eu quanto ela estávamos.
+        </p>
+        <p>
+          Nosso namoro começou na cafeteria preferida dela, e exatamente dois anos depois do nosso primeiro beijo eu derreti o coração dela com meu romantismo ao pedi-la em casamento. Hoje estamos ansiosos para celebrar nossa união ao lado de vocês, numa festa cheia de amor, alegria e o aconchego do pôr do sol.
+        </p>
+        <p className="margem-superior">
+          Nos vemos dia 31 de maio de 2025!
+        </p>
+
+        <p className="margem-superior">
+          Com muito amor,
+          Matheus & Nadyr
+        </p>
+      </Texto>
     </ContainerModal>
   </ContainerForaDoModal>)
 }

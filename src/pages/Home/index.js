@@ -4,6 +4,7 @@ import ContainerPrincipal from '../../components/ContainerPrincipal';
 import ContainerSecundario from '../../components/ContainerSecundario';
 import styled from 'styled-components';
 import ImgFundo from '../../components/ImgFundo';
+import ModalSobreNos from '../../components/ModalSobreNos'
 
 const ContainerMain = styled.main`
 @media screen and (min-width: 1260px) {
@@ -25,11 +26,22 @@ height: auto; /* Mantém a proporção da imagem */
 `;
 
 
-
-
-
 function Body() {
     const [timeLeft, setTimeLeft] = useState('');
+
+    const [Modal, setModal] = useState(false);
+
+    function statusModal() {
+        setModal(!Modal);
+    }
+
+
+    function ClickForaDoModal(e) {
+        if (e.target === e.currentTarget) {
+            setModal(false);
+        }
+    }
+
 
     useEffect(() => {
         const diaDoCasamento = new Date("2025-05-31T16:30:00");
@@ -58,6 +70,11 @@ function Body() {
         <ContainerMain>
             <ContainerPrincipal timer={timeLeft} />
             <ContainerSecundario />
+            {Modal && (<ModalSobreNos
+                onClickForaDoModal={ClickForaDoModal}
+                onClickStatusModal={statusModal}
+            />
+            )}
         </ContainerMain>
     </>
     );

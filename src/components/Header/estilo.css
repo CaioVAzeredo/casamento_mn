@@ -162,6 +162,9 @@ nav {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo{
+    height: 60px;
+  }
   .nav-list li {
     text-align: center;
     padding: auto;

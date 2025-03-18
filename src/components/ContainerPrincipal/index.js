@@ -208,11 +208,11 @@ height: 590px;
     }
 
     .relogioInfo {
-        padding-left: 35px;
+        padding-left: 30px;
         padding-bottom: 5px;
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 78%;
         font-size: 20px;
     }
 
