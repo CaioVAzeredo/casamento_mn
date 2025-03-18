@@ -14,6 +14,19 @@ main {
     margin: 0 auto;
 }
 }`
+const ImgFundoWrapper = styled.div`
+display: block; /* Garante que fique visível */
+width: 100%;
+height: auto; /* Mantém a proporção da imagem */
+
+@media (max-width: 768px) {
+  display: none; /* Oculta em telas menores */
+}
+`;
+
+
+
+
 
 function Body() {
     const [timeLeft, setTimeLeft] = useState('');
@@ -39,7 +52,9 @@ function Body() {
     }, []);
 
     return (<>
-        <ImgFundo />
+        <ImgFundoWrapper>
+            <ImgFundo />
+        </ImgFundoWrapper>
         <ContainerMain>
             <ContainerPrincipal timer={timeLeft} />
             <ContainerSecundario />

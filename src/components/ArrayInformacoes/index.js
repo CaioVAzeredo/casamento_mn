@@ -13,7 +13,7 @@ function Arrayinformacoes() {
         {
             img: festaLocal,
             titulo: 'Onde',
-            descricao: 'Rua 34 norte, Lote 4, Edifício Real Flat, Salão de festas.',
+            descricao: 'Rua 34 norte, Lote 4, Edifício Real Flat, Salão de festas. Aguas Claras',
             alt: 'foto 2 da pagina de informação'
         },
         {
