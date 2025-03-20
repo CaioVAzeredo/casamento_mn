@@ -55,6 +55,7 @@ function ListaDePresentes() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+
     const fetchPresentes = async () => {
 
       try {
@@ -67,6 +68,7 @@ function ListaDePresentes() {
       } catch (erro) {
         setErro("Informações indisponíveis no momento.. Procure o suporte!");
         console.error("Erro ao buscar dados:", erro);
+        setPresentes(ArrayPresentes())
       } finally {
         setLoading(false)
       }
@@ -75,18 +77,11 @@ function ListaDePresentes() {
     fetchPresentes();
   }, []);
 
-  if (loading) {
-    return <Carregamento>
-      <p>Carregando informações...</p>
-    </Carregamento>
-  }
-
   return (
     <>
       <ImgFundo />
       <SectionPresente>
         <ContainerH1 conteudo='Lista de presentes' />
-        {erro && <div className="msgError">Pagina em manutenção..</div>}
         <DivPresentes>
           {presentes.map(
             presente => <WishList

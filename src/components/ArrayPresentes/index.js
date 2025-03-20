@@ -11,12 +11,20 @@ function ArrayPresentes() {
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/caixa-de-cha.png"
         },
         {
-            nome: "Cama Casal Multifuncional Madeira Maciça",
-            preco: 2341.16,
+            nome: "Cabideiro de Parede Madeira",
+            preco: 118.93,
             pix: QRCode,
-            link: "https://www.amazon.com.br/dp/B08HV734TY/?coliid=I2SEU2R37M6JNL&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+            link: "",
             chave_pix: chave_pix,
-            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/cama-casal-multifuncional.png"
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Cabideiro-de-Parede-Madeira.png"
+        },
+        {
+            nome: "Cabide Triunfo 4 ganchos",
+            preco: 118.93,
+            pix: QRCode,
+            link: "",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Cabide-Triunfo-4-ganchos.png"
         },
         {
             nome: "Jogo 3 Cestas Bandeja de Palha/Fibra",
@@ -25,6 +33,22 @@ function ArrayPresentes() {
             link: "https://www.amazon.com.br/dp/B0BJC2K49G/?coliid=I3K42BC2TJ1KH2&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chave_pix: chave_pix,
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/cestas-bandeija-de-palha.png"
+        },
+        {
+            nome: "Jogo de toalhas Florentina Banho",
+            preco: 174.30,
+            pix: QRCode,
+            link: "https://www.amazon.com.br/dp/B0BJC2K49G/?coliid=I3K42BC2TJ1KH2&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Jogo-de-toalhas.png"
+        },
+        {
+            nome: "Chaleira Elétrica",
+            preco: 174.30,
+            pix: QRCode,
+            link: "https://www.amazon.com.br/dp/B0BJC2K49G/?coliid=I3K42BC2TJ1KH2&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/chaleira-eletrica.png"
         },
         {
             nome: "Chapa Sanduicheira de Fogão",
@@ -155,12 +179,44 @@ function ArrayPresentes() {
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/edredom-casal-queen-branco.png"
         },
         {
-            nome: "Jogo de Lençol Casal Algodão Azul",
+            nome: "Capa de Edredom Duvet (Palha)",
+            preco: 212.49,
+            pix: QRCode,
+            link: "",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/capa-de-edredon-palha.png"
+        },
+        {
+            nome: "Kit Colcha Cobre Leito King (Azul)",
+            preco: 212.49,
+            pix: QRCode,
+            link: "",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/kit-colcha-cobre-azul.png"
+        },
+        {
+            nome: "Jogo Lençol Casal 4 Peças (Azul)",
             preco: 121.99,
             pix: QRCode,
             link: "https://www.amazon.com.br/dp/B0C1LHZBD5/?coliid=I14HS665Y5ZS1F&colid=1YJB1CH3PNW96&ref_=list_c_wl_lv_vv_lig_dp_it&th=1",
             chave_pix: chave_pix,
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/jogo-lençol-casal-azul.png"
+        },
+        {
+            nome: "Jogo Lençol Casal 4 Peças (Rosa)",
+            preco: 121.99,
+            pix: QRCode,
+            link: "https://www.amazon.com.br/dp/B0C1LKNVR1/?coliid=I1O4VTOD43DGB6&colid=1YJB1CH3PNW96&ref_=list_c_wl_lv_vv_lig_dp_it_im&th=1",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/jogo-len%C3%A7ol-casal-rosa.png"
+        },
+        {
+            nome: "Jogo Lençol Casal 4 Peças (Palha)",
+            preco: 121.99,
+            pix: QRCode,
+            link: "https://www.amazon.com.br/dp/B0C1LL2XGR/?coliid=I34NMIP3DX34XM&colid=1YJB1CH3PNW96&ref_=list_c_wl_lv_vv_lig_dp_it_im&th=1",
+            chave_pix: chave_pix,
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/jogo-len%C3%A7ol-casal-palha.png"
         },
         {
             nome: "Mesa Escrivaninha Retro Madeira",
@@ -209,14 +265,6 @@ function ArrayPresentes() {
             link: "https://www.amazon.com.br/dp/B0D98SFSB1/?coliid=I2L0GLTSSD77YV&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chave_pix: chave_pix,
             imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/conjunto-de-talheres-de-preto.png"
-        },
-        {
-            nome: "Coup (Jogo de Cartas)",
-            preco: 104.90,
-            pix: QRCode,
-            link: "https://www.amazon.com.br/dp/B07F4G4LJK/?coliid=I3AMTDTT6KA4FG&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
-            chave_pix: chave_pix,
-            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/coup.png"
         },
         {
             nome: "Depurador Slim Philco Cinza",
