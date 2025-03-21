@@ -14,7 +14,7 @@ function ListaDePresenca() {
         try {
             console.log("Enviando dados:", presenca);
 
-            const resposta = await fetch('https://localhost:7169/api/Formulario', {
+            const resposta = await fetch('https://api-casamento-bsaphxatfjaxgvgt.canadaeast-01.azurewebsites.net/api/formulario', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

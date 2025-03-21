@@ -59,7 +59,7 @@ function ListaDePresentes() {
     const fetchPresentes = async () => {
 
       try {
-        const resposta = await fetch('https://localhost:7169/api/Presente');
+        const resposta = await fetch('');
         if (!resposta.ok) {
           throw new Error(`Erro ao buscas lista de presentes: ${resposta.statusText}`);
         }
