@@ -220,7 +220,7 @@ function ArrayPresentes() {
         },
         {
             nome: "Mesa Escrivaninha Retro Madeira",
-            preco: 585.51,
+            preco: 589.51,
             pix: QRCode,
             link: "https://www.amazon.com.br/dp/B0CBQ4KL1K/?coliid=I2DAECMNQ1C964&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chave_pix: chave_pix,
