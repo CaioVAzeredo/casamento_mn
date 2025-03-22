@@ -7,7 +7,25 @@ import { useEffect, useState } from "react";
 import ImgFundo from "../../components/ImgFundo";
 
 const SectionPresente = styled.section`
+.texto-presente{
+    color: #014166;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 17px;
+}
 margin-bottom: 500px;
+
+@media screen and (max-width: 750px) {
+  .texto-presente{
+width: 60%;
+}
+@media screen and (min-width: 750px) {
+  .texto-presente{
+
+    font-size: 25px;
+}
+  }
 .msgError{
   width: 800px;
   text-align: center;
@@ -36,18 +54,7 @@ const DivPresentes = styled.div`
     grid-template-columns: repeat(1, 1fr);
   }
 `;
-const Carregamento = styled.div`
-height: 100vh;
-width: 100vw;
-margin: 0 auto;
 
-p{
-  padding-top: 350px;
-  font-size: 50px;
-  text-align: center;
-  
-}
-`;
 function ListaDePresentes() {
 
   const [presentes, setPresentes] = useState([]);
@@ -82,6 +89,7 @@ function ListaDePresentes() {
       <ImgFundo />
       <SectionPresente>
         <ContainerH1 conteudo='Lista de presentes' />
+        <h3 className="texto-presente"> O melhor presente que podemos receber é a presença de vocês nesse dia especial, mas caso ainda queiram deixar uma lembrança para o casal, aqui temos uma lista de sugestões de coisas que precisamos e queremos.</h3>
         <DivPresentes>
           {presentes.map(
             presente => <WishList

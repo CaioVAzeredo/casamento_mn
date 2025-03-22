@@ -310,7 +310,7 @@ function ContainerSecundario() {
                 <Containerh1>SOBRE NÓS</Containerh1>
                 <ContainerParagrafo>
                     <p>
-                        Dois conhecidos que se aproximaram por acaso. A gente se encontrava em um churrasco, um barzinho, uma festa junina de igreja, até que, em uma festa, eu pedi um beijo pra ela e ela recusou 😥.  Mas logo ela viu a besteira que tinha feito e voltou correndo pra mim. Desde então, nunca nos separamos. Começamos a sair e eu logo admiti estar apaixonado, ao que ela respondeu com um teimoso "não tá, não", mas no fundo ela sabia que tanto eu quanto ela estávamos.
+                        Dois conhecidos que se aproximaram por acaso. A gente se encontrava em um churrasco, um barzinho, uma festa junina de igreja, até que, em uma festa, eu lhe pedi um beijo e ela recusou 😥.  Mas logo ela viu a besteira que tinha feito e voltou correndo pra mim. Desde então, nunca nos separamos. Começamos a sair e eu logo admiti estar apaixonado, ao que ela respondeu com um teimoso "não tá, não", mas no fundo ela sabia que tanto eu quanto ela estávamos.
                     </p>
                     <p>
                         Nosso namoro começou na cafeteria preferida... </p>
