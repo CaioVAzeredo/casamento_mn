@@ -20,10 +20,10 @@ margin-bottom: 500px;
   .texto-presente{
 width: 60%;
 }
-@media screen and (min-width: 750px) {
+  }
+  @media screen and (max-width: 750px) {
   .texto-presente{
-
-    font-size: 25px;
+    font-size: 20px;
 }
   }
 .msgError{
