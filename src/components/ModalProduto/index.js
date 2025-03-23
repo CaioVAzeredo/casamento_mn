@@ -65,10 +65,6 @@ const ContainerModal = styled.div`
 `;
 
 function ModalProduto({ onClickForaDoModal, onClickStatusModal, onClickStatusModalPix, img, nome, preco, link }) {
-  function ClickAmazon() {
-    window.location.href = `${link}`
-  }
-
 
   return (<ContainerForaDoModal onClick={onClickForaDoModal}>
     <ContainerModal>
@@ -78,7 +74,6 @@ function ModalProduto({ onClickForaDoModal, onClickStatusModal, onClickStatusMod
       <p>R$ {preco}</p>
       <div className="botoes-doacao">
         <Button informacao="Presentear por pix" onClick={onClickStatusModalPix} />
-        <Button informacao="Presentear pela Amazon" onClick={ClickAmazon} />
       </div>
     </ContainerModal>
   </ContainerForaDoModal>)

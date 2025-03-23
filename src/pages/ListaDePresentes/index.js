@@ -5,6 +5,7 @@ import ContainerH1 from "../../components/ContainerH1";
 import ArrayPresentes from "../../components/ArrayPresentes";
 import { useEffect, useState } from "react";
 import ImgFundo from "../../components/ImgFundo";
+import Button from "../../components/Button";
 
 const SectionPresente = styled.section`
 .texto-presente{
@@ -16,6 +17,11 @@ const SectionPresente = styled.section`
 }
 margin-bottom: 500px;
 
+.botaoAmazon{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
 @media screen and (max-width: 750px) {
   .texto-presente{
 width: 60%;
@@ -84,12 +90,18 @@ function ListaDePresentes() {
     fetchPresentes();
   }, []);
 
+  function ClickAmazon() {
+    window.location.href = `https://www.amazon.com.br/hz/wishlist/ls/1YJB1CH3PNW96?ref=cm_sw_wa_r_un_un_dXMXnZK98UMT7`
+  }
   return (
     <>
       <ImgFundo />
       <SectionPresente>
         <ContainerH1 conteudo='Lista de presentes' />
         <h3 className="texto-presente"> O melhor presente que podemos receber é a presença de vocês nesse dia especial, mas caso ainda queiram deixar uma lembrança para o casal, aqui temos uma lista de sugestões de coisas que precisamos e queremos.</h3>
+        <div className="botaoAmazon">
+          <Button informacao="Presentear pela Amazon" onClick={ClickAmazon} />
+        </div>
         <DivPresentes>
           {presentes.map(
             presente => <WishList
