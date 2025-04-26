@@ -14,7 +14,7 @@ function ListaDePresenca() {
         try {
             console.log("Enviando dados:", presenca);
 
-            const resposta = await fetch('http://159.89.53.51:5000/api/formulario', {
+            const resposta = await fetch('https://apicasamento.caioapi.lat/api/formulario', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
