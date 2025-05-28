@@ -368,7 +368,7 @@ function ArrayPresentes() {
             pix: QRCode,
             link: "https://www.amazon.com.br/dp/B0CLVS28NX/?coliid=I19LEPP7F5IQ1D&colid=1YJB1CH3PNW96&psc=1&ref_=list_c_wl_lv_vv_lig_dp_it",
             chave_pix: chave_pix,
-            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Jode-de-3-facas.png"
+            imagem: "https://raw.githubusercontent.com/CaioVAzeredo/fotosCasamentoMN/main/Jogo-de-3-facas.png"
         },
         {
             nome: "Pedra para Afiar Dupla Face Suprema, Brinox, Cinza, 20 x 5 cm",

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import ContainerH1 from "../../components/ContainerH1";
 import ImgFundo from "../../components/ImgFundo";
+import ArrayListaPresenca from "../../components/ArrayListaPresenca";
 
 const ConainerFora = styled.div`
 padding-bottom: 30px;
@@ -52,8 +53,7 @@ function PaginaDosNoivos() {
                 const dados = await resposta.json();
                 setList(dados);
             } catch (erro) {
-                setErro("Informações indisponíveis no momento.. Procure o suporte!");
-                console.error("Erro ao buscar dados:", erro);
+                setList(ArrayListaPresenca);
             } finally {
                 setLoading(false);
             }
@@ -71,7 +71,7 @@ function PaginaDosNoivos() {
         <ImgFundo />
         <ContainerH1 conteudo="Lista de presença" />
         <ConainerFora>
-        {erro && <div className="msgError">Erro ao carregar a pagina..</div>}
+            {erro && <div className="msgError">Erro ao carregar a pagina..</div>}
             {listPresenca.map(
                 presenca => <ContainerPresenca>
                     <div >
